@@ -34,7 +34,7 @@ jobs:
       - name: Проверить покрытие (>90%)
         run: |
           cd lab1
-          gcovr --root . --filter "src/" --txt-summary --fail-under-line 90
+          gcovr -r . --filter "src/.*" --txt-summary --fail-under-line 90 build/
 
       - name: Статический анализ (cppcheck)
         run: |
