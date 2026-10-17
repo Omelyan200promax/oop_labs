@@ -57,46 +57,54 @@ bool Set::empty() const
 // Объединение 2 множеств
 std::shared_ptr<SetLike> Set::unite(const SetLike &other) const
 {
-    auto result = std::make_shared<Set>(*this);
-
-    for (std::size_t i = 0; i < other.size(); ++i)
+    const Set *other_set = dynamic_cast<const Set *>(&other);
+    if (other_set == nullptr)
     {
-        auto element = other.elementAt(i);
-        result->add(element);
+        throw std::invalid_argument("Set можно объединять только с Set");
     }
-
+    auto result = std::make_shared<Set>(*this);
+    for (std::size_t i = 0; i < other_set->size(); ++i)
+    {
+        result->add(other_set->elementAt(i));
+    }
     return result;
 }
 
 // Пересечение 2 множеств
 std::shared_ptr<SetLike> Set::intersect(const SetLike &other) const
 {
+    const Set *other_set = dynamic_cast<const Set *>(&other);
+    if (other_set == nullptr)
+    {
+        throw std::invalid_argument("Set можно пересекать только с Set");
+    }
     auto result = std::make_shared<Set>();
-
     for (const auto &element : elements_)
     {
-        if (other.contains(element))
+        if (other_set->contains(element))
         {
             result->add(element);
         }
     }
-
     return result;
 }
 
 // Разность 2 множеств
 std::shared_ptr<SetLike> Set::difference(const SetLike &other) const
 {
+    const Set *other_set = dynamic_cast<const Set *>(&other);
+    if (other_set == nullptr)
+    {
+        throw std::invalid_argument("Set можно вычитать только из Set");
+    }
     auto result = std::make_shared<Set>();
-
     for (const auto &element : elements_)
     {
-        if (!other.contains(element))
+        if (!other_set->contains(element))
         {
             result->add(element);
         }
     }
-
     return result;
 }
 
