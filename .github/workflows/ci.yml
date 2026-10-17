@@ -1,0 +1,72 @@
+name: C++ CI/CD
+
+on:
+  push:
+    branches: [ main, "feature/**" ]
+    tags: [ "v*" ] # запускается при создании тега (для Releases)
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # ==========================================
+  # ДЖОБ 1: Тесты, покрытие и линтер (Linux)
+  # ==========================================
+  test-and-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Скачать код
+        uses: actions/checkout@v4
+
+      - name: Установить зависимости
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake g++ gcovr cppcheck
+
+      - name: Настроить CMake (с покрытием)
+        run: cmake -S lab1 -B lab1/build -DCMAKE_BUILD_TYPE=Debug -DENABLE_COVERAGE=ON
+
+      - name: Собрать проект
+        run: cmake --build lab1/build
+
+      - name: Запустить тесты
+        run: ctest --test-dir lab1/build --output-on-failure
+
+      - name: Проверить покрытие (>90%)
+        run: |
+          cd lab1
+          gcovr --root . --filter "src/" --txt-summary --fail-under-line 90
+
+      - name: Статический анализ (cppcheck)
+        run: |
+          cppcheck --enable=warning,style,performance --error-exitcode=1 -I lab1/include lab1/src lab1/app
+
+  # ==========================================
+  # ДЖОБ 2: Сборка артефакта и Releases (Windows)
+  # ==========================================
+  build-release:
+    if: startsWith(github.ref, 'refs/tags/v') # только при пуше тега v*
+    runs-on: windows-latest
+    needs: test-and-lint # запускать только если тесты прошли
+    steps:
+      - name: Скачать код
+        uses: actions/checkout@v4
+
+      - name: Установить MSYS2 (MinGW)
+        uses: msys2/setup-msys2@v2
+        with:
+          msystem: UCRT64
+          update: true
+          install: mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-cmake mingw-w64-ucrt-x86_64-make
+
+      - name: Настроить и собрать Release (статически)
+        shell: msys2 {0}
+        run: |
+          cmake -S lab1 -B lab1/build-release -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
+          cmake --build lab1/build-release
+
+      - name: Выложить в Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          files: lab1/build-release/lab1_cli.exe
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
