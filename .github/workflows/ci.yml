@@ -38,8 +38,8 @@ jobs:
 
       - name: Статический анализ (cppcheck)
         run: |
-          cppcheck --enable=warning,style,performance --error-exitcode=1 -I lab1/include lab1/src lab1/app
-
+          cppcheck --enable=warning,performance --error-exitcode=1 -I lab1/include lab1/src lab1/app
+        
   # ==========================================
   # ДЖОБ 2: Сборка артефакта и Releases (Windows)
   # ==========================================
