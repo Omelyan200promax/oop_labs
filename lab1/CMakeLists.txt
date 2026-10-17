@@ -4,7 +4,19 @@ project(lab1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-#  GoogleTest
+# Настройка покрытия (передается из CI через -DENABLE_COVERAGE=ON)
+option(ENABLE_COVERAGE "Enable coverage" OFF)
+if(ENABLE_COVERAGE)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --coverage -O0 -g")
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} --coverage")
+endif()
+
+# Статическая сборка для Windows (чтобы .exe запускался без DLL)
+if(WIN32 AND CMAKE_BUILD_TYPE STREQUAL "Release")
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static -static-libgcc -static-libstdc++")
+endif()
+
+# GoogleTest
 include(FetchContent)
 FetchContent_Declare(
     googletest
@@ -13,7 +25,7 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-#  Библиотека предметной области 
+# Библиотека предметной области
 add_library(lab1_lib
     src/Atom.cpp
     src/Set.cpp
@@ -21,14 +33,14 @@ add_library(lab1_lib
 )
 target_include_directories(lab1_lib PUBLIC include)
 
-#  CLI 
+# CLI
 add_executable(lab1_cli
     app/main.cpp
     app/menu.cpp
 )
 target_link_libraries(lab1_cli PRIVATE lab1_lib)
 
-#  Тесты 
+# Тесты
 enable_testing()
 
 add_executable(lab1_tests
