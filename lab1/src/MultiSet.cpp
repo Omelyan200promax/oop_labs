@@ -120,11 +120,11 @@ std::shared_ptr<SetLike> MultiSet::unite(const SetLike &other) const
     {
         auto element = other_ms->elements_[i].first;
         std::size_t other_count = other_ms->elements_[i].second;
-        std::size_t my_count = result->count(element);
+        std::size_t this_count = result->count(element);
 
-        if (other_count > my_count)
+        if (other_count > this_count)
         {
-            std::size_t diff = other_count - my_count;
+            std::size_t diff = other_count - this_count;
             for (std::size_t k = 0; k < diff; ++k)
             {
                 result->add(element);
@@ -148,9 +148,9 @@ std::shared_ptr<SetLike> MultiSet::intersect(const SetLike &other) const
     for (const auto &pair : elements_)
     {
         auto element = pair.first;
-        std::size_t my_count = pair.second;
+        std::size_t this_count = pair.second;
         std::size_t other_count = other_ms->count(element);
-        std::size_t min_count = (my_count < other_count) ? my_count : other_count;
+        std::size_t min_count = (this_count < other_count) ? this_count : other_count;
 
         for (std::size_t k = 0; k < min_count; ++k)
         {
@@ -174,12 +174,12 @@ std::shared_ptr<SetLike> MultiSet::difference(const SetLike &other) const
     for (const auto &pair : elements_)
     {
         auto element = pair.first;
-        std::size_t my_count = pair.second;
+        std::size_t this_count = pair.second;
         std::size_t other_count = other_ms->count(element);
 
-        if (my_count > other_count)
+        if (this_count > other_count)
         {
-            std::size_t diff = my_count - other_count;
+            std::size_t diff = this_count - other_count;
             for (std::size_t k = 0; k < diff; ++k)
             {
                 result->add(element);
