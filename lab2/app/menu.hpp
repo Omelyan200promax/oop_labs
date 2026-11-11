@@ -1,7 +1,7 @@
 ﻿#pragma once
 
-class Menu {
+class Menu
+{
 public:
     void run();
 };
-
