@@ -20,4 +20,5 @@ public:
     double calculateTotal() const;
     void changeStatus(std::string newStatus);
     std::string getStatus() const;
+    Customer getCustomer() const;
 };

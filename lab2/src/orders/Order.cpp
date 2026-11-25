@@ -11,12 +11,10 @@ void Order::addBook(Book book)
 
 double Order::calculateTotal() const
 {
-    // Упрощенно считаем сумму без учета скидок и валюты (т.к. Price хранит строку)
     double total = 0;
     for (const auto &b : books_)
     {
-        // В учебных целях просто возвращаем количество книг * 500
-        total += 500.0;
+        total += b.getPriceAmount();
     }
     return total;
 }
@@ -31,3 +29,4 @@ void Order::changeStatus(std::string newStatus)
 }
 
 std::string Order::getStatus() const { return status_; }
+Customer Order::getCustomer() const { return customer_; }

@@ -22,5 +22,7 @@ public:
     void addSection(Section section);
     void addEquipment(Equipment eq);
     void performCheck(InventoryCheck &check);
+
+    Address getAddress() const;
     int getTotalSections() const;
 };

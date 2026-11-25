@@ -47,3 +47,10 @@ bool Book::sellCopy()
     }
     return false;
 }
+
+std::string Book::getTitle() const { return title_; }
+std::string Book::getAuthorName() const { return author_.getFullName(); }
+double Book::getPriceAmount() const { return price_.getAmount(); }
+int Book::getStockCount() const { return stockCount_; }
+int Book::getRatingScore() const { return rating_.getScore(); }
+std::vector<Review> Book::getReviews() const { return reviews_; }

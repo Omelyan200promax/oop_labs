@@ -1,6 +1,5 @@
 ﻿#pragma once
 #include <string>
-
 class Price
 {
 private:
@@ -11,4 +10,5 @@ public:
     Price(double amount, std::string currency);
     void applyDiscount(double percent);
     std::string toString() const;
+    double getAmount() const;
 };

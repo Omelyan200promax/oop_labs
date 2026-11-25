@@ -42,4 +42,11 @@ public:
     bool isAvailable() const;
     void addStock(int count);
     bool sellCopy();
+
+    std::string getTitle() const;
+    std::string getAuthorName() const;
+    double getPriceAmount() const;
+    int getStockCount() const;
+    int getRatingScore() const;
+    std::vector<Review> getReviews() const;
 };

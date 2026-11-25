@@ -1,10 +1,18 @@
-#include <iostream>
 #include "menu.hpp"
+
+#ifdef _WIN32
+#include <windows.h>
+#endif
 
 int main()
 {
-    std::cout << "Lab 2 CLI is running!" << std::endl;
-    // Menu menu;
-    // menu.run();
+#ifdef _WIN32
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+#endif
+
+    Menu menu;
+    menu.run();
+
     return 0;
 }

@@ -9,4 +9,5 @@ private:
 public:
     Review(std::string text, std::string authorName);
     std::string getText() const;
+    std::string getAuthor() const;
 };

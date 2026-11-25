@@ -12,3 +12,26 @@ bool Customer::pay(double amount)
     }
     return false;
 }
+
+std::string Customer::getName() const { return name_; }
+std::string Customer::getEmail() const { return contact_.getEmail(); }
+std::string Customer::getAddressStr() const { return address_.getFullAddress(); }
+double Customer::getBalance() const { return balance_; }
+Address Customer::getAddress() const { return address_; }
+int Customer::getActiveOrdersCount() const { return activeOrdersCount_; }
+
+void Customer::incrementActiveOrders() { activeOrdersCount_++; }
+
+void Customer::decrementActiveOrders()
+{
+    if (activeOrdersCount_ > 0)
+        activeOrdersCount_--;
+}
+
+void Customer::deposit(double amount)
+{
+    if (amount > 0)
+    {
+        balance_ += amount;
+    }
+}
