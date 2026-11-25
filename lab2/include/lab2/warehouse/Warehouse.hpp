@@ -4,15 +4,15 @@
 #include "lab2/warehouse/Section.hpp"
 #include "lab2/warehouse/Equipment.hpp"
 #include "lab2/warehouse/InventoryCheck.hpp"
-#include "lab2/common/Address.hpp"     // Добавили
-#include "lab2/common/ContactInfo.hpp" // Добавили
+#include "lab2/common/Address.hpp"
+#include "lab2/common/ContactInfo.hpp"
 
 class Warehouse
 {
 private:
     std::string name_;
-    Address address_;     // Новая связь
-    ContactInfo contact_; // Новая связь
+    Address address_;
+    ContactInfo contact_;
     std::vector<Section> sections_;
     std::vector<Equipment> equipment_;
 
