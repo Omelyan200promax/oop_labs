@@ -1,7 +1,15 @@
 ﻿#include "lab2/common/Price.hpp"
 #include <sstream>
+#include <stdexcept> // Подключаем для исключения
 
-Price::Price(double amount, std::string currency) : amount_(amount), currency_(currency) {}
+Price::Price(double amount, std::string currency) : currency_(currency)
+{
+    if (amount < 0)
+    {
+        throw std::invalid_argument("Цена не может быть отрицательной");
+    }
+    amount_ = amount;
+}
 
 void Price::applyDiscount(double percent)
 {

@@ -1,45 +1,39 @@
-﻿#include "lab2/core/Book.hpp"
-#include "lab2/exceptions/InvalidBookDataException.hpp"
-#include <sstream>
+﻿#pragma once
+#include <string>
+#include "lab2/core/Author.hpp"
+#include "lab2/core/Publisher.hpp"
+#include "lab2/core/Genre.hpp"
+#include "lab2/core/Category.hpp"
+#include "lab2/core/Language.hpp"
+#include "lab2/core/CoverType.hpp"
+#include "lab2/common/Price.hpp"
+#include "lab2/common/Dimensions.hpp"
+#include "lab2/common/CustomDate.hpp"
 
-Book::Book(std::string title, std::string isbn, Author author, Publisher publisher, Genre genre, Price price, Dimensions dimensions, CustomDate pubDate, int stock)
-    : title_(title), isbn_(isbn), author_(author), publisher_(publisher), genre_(genre), price_(price), dimensions_(dimensions), publicationDate_(pubDate), stockCount_(stock)
+class Book
 {
+private:
+    std::string title_;
+    std::string isbn_;
+    Author author_;
+    Publisher publisher_;
+    Genre genre_;
+    Category category_;   // Новая связь
+    Language language_;   // Новая связь
+    CoverType coverType_; // Новая связь
+    Price price_;
+    Dimensions dimensions_;
+    CustomDate publicationDate_;
+    int stockCount_;
 
-    if (title_.empty() || isbn_.empty())
-    {
-        throw InvalidBookDataException("Название и ISBN не могут быть пустыми");
-    }
-}
+public:
+    // Обновленный конструктор (стало больше параметров)
+    Book(std::string title, std::string isbn, Author author, Publisher publisher,
+         Genre genre, Category category, Language language, CoverType coverType,
+         Price price, Dimensions dimensions, CustomDate pubDate, int stock);
 
-std::string Book::getInfo() const
-{
-    std::ostringstream os;
-    os << "Книга: " << title_ << " | Автор: " << author_.getFullName()
-       << " | Жанр: " << genre_.getDescription() << " | Цена: " << price_.toString()
-       << " | На складе: " << stockCount_ << " шт.";
-    return os.str();
-}
-
-bool Book::isAvailable() const
-{
-    return stockCount_ > 0;
-}
-
-void Book::addStock(int count)
-{
-    if (count > 0)
-    {
-        stockCount_ += count;
-    }
-}
-
-bool Book::sellCopy()
-{
-    if (isAvailable())
-    {
-        stockCount_--;
-        return true;
-    }
-    return false;
-}
+    std::string getInfo() const;
+    bool isAvailable() const;
+    void addStock(int count);
+    bool sellCopy();
+};
