@@ -7,6 +7,7 @@ private:
     int experienceYears_;
 
 public:
-    Editor(std::string name, int id, double salary, int experienceYears);
-    void editText();
+    Editor(std::string name, int id, double salary, Role role, int experienceYears);
+    void work() override;
+    void editBook();
 };

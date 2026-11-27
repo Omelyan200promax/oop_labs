@@ -35,3 +35,8 @@ void Customer::deposit(double amount)
         balance_ += amount;
     }
 }
+
+void Customer::addNotification(const Notification &notif) { notifications_.push_back(notif); }
+std::vector<Notification> &Customer::getNotifications() { return notifications_; }
+void Customer::addOrderId(int orderId) { orderIds_.push_back(orderId); }
+std::vector<int> Customer::getOrderIds() const { return orderIds_; }

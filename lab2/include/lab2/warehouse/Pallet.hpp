@@ -1,14 +1,15 @@
 ﻿#pragma once
+#include <vector>
+#include "lab2/warehouse/Box.hpp"
 
 class Pallet
 {
 private:
     int id_;
-    int maxBoxes_;
-    int currentBoxes_;
+    std::vector<Box> boxes_;
 
 public:
-    Pallet(int id, int maxBoxes);
-    bool addBox();
-    int getFreeSpace() const;
+    Pallet(int id);
+    void addBox(Box box);
+    int getBoxCount() const;
 };

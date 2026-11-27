@@ -6,8 +6,8 @@ Payment::Payment(int id, Customer customer, Price amount)
 
 void Payment::processPayment()
 {
-    if (customer_.pay(1000.0))
-    { // Упрощенно
+    if (customer_.pay(amount_.getAmount()))
+    {
         isSuccess_ = true;
     }
     else

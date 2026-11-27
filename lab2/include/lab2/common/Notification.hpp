@@ -9,4 +9,6 @@ private:
 public:
     Notification(std::string message);
     void markAsRead();
+    std::string getMessage() const;
+    bool isRead() const;
 };

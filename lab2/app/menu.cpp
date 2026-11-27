@@ -1,15 +1,28 @@
 #include "menu.hpp"
-#include "lab2/orders/Payment.hpp"
-#include "lab2/orders/Delivery.hpp"
-#include "lab2/orders/Shipment.hpp"
-#include "lab2/orders/Invoice.hpp"
-#include <iostream>
-#include <limits>
-#include <iomanip>
+#include "menu_utils.hpp"
 
-Menu::Menu() : nextOrderId_(1), warehouse_("Главный склад", Address("Минск", "ул. Складская, 1"), ContactInfo("+375170000000", "sklad@bsuir.by"))
+#include <algorithm>
+#include <iomanip>
+#include <iostream>
+
+#include "lab2/common/ContactInfo.hpp"
+#include "lab2/common/Notification.hpp"
+#include "lab2/exceptions/AccessDeniedException.hpp"
+#include "lab2/exceptions/BookNotFoundException.hpp"
+#include "lab2/people/Accountant.hpp"
+#include "lab2/people/Auditor.hpp"
+#include "lab2/people/Courier.hpp"
+#include "lab2/people/Editor.hpp"
+#include "lab2/people/Manager.hpp"
+#include "lab2/people/Storekeeper.hpp"
+#include "lab2/people/Supplier.hpp"
+
+Menu::Menu()
+    : warehouse_("Главный склад", Address("Минск", "ул. Складская, 1"), ContactInfo("+375170000000", "sklad@bsuir.by")),
+      today_(ui::today()),
+      nextOrderId_(1), nextInvoiceId_(1), nextPaymentId_(1), activeCustomerIndex_(-1)
 {
-    // 12 книг (Цены от 20 до 50 BYN, прописаны годы жизни авторов)
+    // ----- Каталог: 12 книг -----
     books_.push_back(Book("Война и мир", "978-5-04-118560-0", Author("Лев", "Толстой", "Россия", 1828, 1910), Publisher("Азбука", "СПб"), Genre("Роман-эпопея", "Исторический"), Category("Классика", "Русская литература"), Language("Русский", "ru"), CoverType("Твердая", true), Price(35.50, "BYN"), Dimensions(24.0, 17.0, 6.0), CustomDate(1, 1, 1869), 10));
     books_.push_back(Book("Преступление и наказание", "978-5-17-118290-7", Author("Фёдор", "Достоевский", "Россия", 1821, 1881), Publisher("АСТ", "Москва"), Genre("Психологический роман", "Драма"), Category("Классика", "Русская литература"), Language("Русский", "ru"), CoverType("Мягкая", false), Price(25.00, "BYN"), Dimensions(20.0, 13.0, 3.0), CustomDate(1, 1, 1866), 5));
     books_.push_back(Book("Анна Каренина", "978-5-04-099327-5", Author("Лев", "Толстой", "Россия", 1828, 1910), Publisher("Эксмо", "Москва"), Genre("Роман", "Трагедия"), Category("Классика", "Русская литература"), Language("Русский", "ru"), CoverType("Твердая", true), Price(42.00, "BYN"), Dimensions(22.0, 15.0, 5.0), CustomDate(1, 1, 1877), 8));
@@ -23,7 +36,7 @@ Menu::Menu() : nextOrderId_(1), warehouse_("Главный склад", Address(
     books_.push_back(Book("Ревизор", "978-5-04-116403-2", Author("Николай", "Гоголь", "Россия", 1809, 1852), Publisher("Азбука", "СПб"), Genre("Комедия", "Сатира"), Category("Классика", "Русская литература"), Language("Русский", "ru"), CoverType("Мягкая", false), Price(20.00, "BYN"), Dimensions(18.0, 11.0, 1.0), CustomDate(1, 1, 1836), 8));
     books_.push_back(Book("Вишнёвый сад", "978-5-17-118293-8", Author("Антон", "Чехов", "Россия", 1860, 1904), Publisher("АСТ", "Москва"), Genre("Пьеса", "Драма"), Category("Классика", "Русская литература"), Language("Русский", "ru"), CoverType("Мягкая", false), Price(23.50, "BYN"), Dimensions(17.0, 11.0, 1.5), CustomDate(1, 1, 1904), 6));
 
-    // Клиенты (девочки из группы), балансы 100 - 500 BYN
+    // ----- Клиенты -----
     customers_.push_back(Customer("Омелянчук Анна", ContactInfo("+375291234567", "anna@bsuir.by"), Address("Минск", "ул. Козлова, 15"), 350.0));
     customers_.push_back(Customer("Доронцова Дарья", ContactInfo("+375337654321", "daria@bsuir.by"), Address("Минск", "ул. Бобруйская, 10"), 500.0));
     customers_.push_back(Customer("Абрамова Арина", ContactInfo("+375441112233", "arina@bsuir.by"), Address("Минск", "пр-т Независимости, 65"), 250.0));
@@ -31,99 +44,239 @@ Menu::Menu() : nextOrderId_(1), warehouse_("Главный склад", Address(
     customers_.push_back(Customer("Дубина Елизавета", ContactInfo("+375298889900", "liza@bsuir.by"), Address("Минск", "ул. Сурганова, 2"), 400.0));
     customers_.push_back(Customer("Куприянова Карина", ContactInfo("+375333334455", "karina@bsuir.by"), Address("Минск", "ул. Якуба Коласа, 12"), 200.0));
 
-    // Сотрудники
-    staff_.push_back(std::make_shared<Manager>("Шевченко Алексей", 1, 2500.0, "Отдел продаж"));
-    staff_.push_back(std::make_shared<Storekeeper>("Явченко Никита", 2, 1800.0, "Ночная"));
-    staff_.push_back(std::make_shared<Courier>("Ясинский Платон", 3, 1500.0, "Фургон"));
+    // ----- Сотрудники (уровень доступа задаётся ролью) -----
+    staff_.push_back(std::make_shared<Manager>("Шевченко Алексей", 1, 2500.0, Role("Менеджер", 5), "Отдел продаж"));
+    staff_.push_back(std::make_shared<Storekeeper>("Явченко Никита", 2, 1800.0, Role("Кладовщик", 3), "Ночная"));
+    staff_.push_back(std::make_shared<Courier>("Ясинский Платон", 3, 1500.0, Role("Курьер", 2), "Фургон"));
+    staff_.push_back(std::make_shared<Auditor>("Кускова Вероника", 4, 2200.0, Role("Аудитор", 4)));
+    staff_.push_back(std::make_shared<Accountant>("Данченко Ольга", 5, 2000.0, Role("Бухгалтер", 4), "123456789"));
+    staff_.push_back(std::make_shared<Editor>("Лазарева Мария", 6, 1900.0, Role("Редактор", 3), 7));
 
-    // Оборудование
-    warehouse_.addEquipment(Equipment("Погрузчик", true));
-    warehouse_.addEquipment(Equipment("Сканер штрих-кодов", false));
+    // ----- Оборудование склада -----
+    equipment_.push_back(Equipment("Погрузчик", true));
+    equipment_.push_back(Equipment("Сканер штрихкодов", false)); // сломан: нужно починить перед инвентаризацией
+    equipment_.push_back(Equipment("Фургон", true));
+
+    // ----- Поставщики и договоры -----
+    deals_.push_back({"ООО \"Книжный мир\"", SupplyContract(Supplier("ООО \"Книжный мир\"", ContactInfo("+375172001122", "info@kmir.by")), CustomDate(1, 1, 2026), CustomDate(31, 12, 2027))});
+    deals_.push_back({"ЗАО \"Литера\"", SupplyContract(Supplier("ЗАО \"Литера\"", ContactInfo("+375173334455", "sales@litera.by")), CustomDate(1, 1, 2024), CustomDate(31, 12, 2025))});
+
+    // ----- Структура склада: 2 секции, в каждой стеллаж с полками -----
+    Section classics("Классика", WarehouseZone("Сухая зона", 70));
+    Rack rack1(1);
+    rack1.addShelf(Shelf(1, 3));
+    rack1.addShelf(Shelf(2, 3));
+    classics.addRack(rack1);
+    warehouse_.addSection(classics);
+
+    Section reserve("Резерв", WarehouseZone("Зона B", 60));
+    Rack rack2(2);
+    rack2.addShelf(Shelf(3, 3));
+    rack2.addShelf(Shelf(4, 3));
+    reserve.addRack(rack2);
+    warehouse_.addSection(reserve);
+
+    fillWarehouse();
+    logAction("Система запущена");
 }
 
-void Menu::showBooks() const
+// ===================== служебное =====================
+
+void Menu::fillWarehouse()
 {
-    std::cout << "\nСписок книг:\n";
-    std::cout << std::left << std::setw(35) << "Название" << std::setw(30) << "Автор" << std::setw(15) << "Цена(BYN)" << std::setw(12) << "Остаток" << "Рейтинг\n";
+    // Физически раскладываем на склад столько экземпляров, сколько числится в базе
     for (const auto &b : books_)
-    {
-        std::cout << std::left << std::setw(35) << b.getTitle() << std::setw(30) << b.getAuthorName() << std::setw(15) << b.getPriceAmount() << std::setw(12) << b.getStockCount() << b.getRatingScore() << "/5\n";
-    }
+        for (int i = 0; i < b.getStockCount(); ++i)
+            warehouse_.storeBook(b.getWeight(), b.getTitle());
 }
 
-void Menu::showBookDetails() const
+void Menu::logAction(const std::string &text)
 {
-    showBooks();
-    std::cout << "Выберите книгу для просмотра отзывов (номер): ";
-    int bookIndex;
-    std::cin >> bookIndex;
-    if (bookIndex < 1 || bookIndex > static_cast<int>(books_.size()))
-        return;
+    auditLog_.addRecord("[" + today_.toString() + "] " + text);
+}
 
-    const Book &b = books_[bookIndex - 1];
-    std::cout << "\nОтзывы о книге \"" << b.getTitle() << "\":\n";
-    if (b.getReviews().empty())
+void Menu::notifyCustomer(int customerIdx, const std::string &text)
+{
+    customers_[customerIdx].addNotification(Notification(text));
+}
+
+void Menu::requireLevel(const SystemUser &user, int level, const std::string &what) const
+{
+    if (!user.loginAs(level))
+        throw AccessDeniedException("Доступ запрещён: для действия \"" + what + "\" нужен уровень " + std::to_string(level) + " и выше");
+}
+
+Menu::OrderRecord *Menu::findOrder(int orderId)
+{
+    for (auto &rec : orders_)
+        if (rec.order.getId() == orderId)
+            return &rec;
+    return nullptr;
+}
+
+Book *Menu::findBook(const std::string &title)
+{
+    for (auto &b : books_)
+        if (b.getTitle() == title)
+            return &b;
+    return nullptr;
+}
+
+// Книги из оплаченных/созданных, но ещё не отгруженных заказов: в учёте их уже нет, физически ещё лежат на складе
+int Menu::reservedCopies(const std::string &title) const
+{
+    int n = 0;
+    for (const auto &rec : orders_)
     {
-        std::cout << "Пока нет отзывов.\n";
+        const std::string st = rec.order.getStatus();
+        if (st == "Created" || st == "Paid")
+            for (const auto &t : rec.order.getBookTitles())
+                if (t == title)
+                    ++n;
     }
-    else
+    return n;
+}
+
+Equipment *Menu::findEquipment(const std::string &name)
+{
+    for (auto &e : equipment_)
+        if (e.getName() == name)
+            return &e;
+    return nullptr;
+}
+
+// Возвращает id заказов с указанным статусом
+std::vector<int> Menu::listOrdersByStatus(const std::string &status)
+{
+    std::vector<int> ids;
+    for (const auto &rec : orders_)
+        if (rec.order.getStatus() == status)
+            ids.push_back(rec.order.getId());
+    return ids;
+}
+
+// ===================== главное меню =====================
+
+void Menu::run()
+{
+    int choice;
+    do
     {
-        for (const auto &rev : b.getReviews())
+        std::cout << "\n=== Книжный склад: главное меню (" << today_.toString() << ") ===\n";
+        std::cout << "1. Каталог книг\n";
+        std::cout << "2. Личный кабинет клиента\n";
+        std::cout << "3. Кабинет сотрудника\n";
+        std::cout << "4. Управление складом\n";
+        std::cout << "0. Выход\n\nВыбор: ";
+        choice = ui::readInt(0, 4);
+        switch (choice)
         {
-            std::cout << "[" << rev.getAuthor() << "]: " << rev.getText() << "\n";
+        case 1:
+            runCatalogMenu();
+            break;
+        case 2:
+            loginCustomer();
+            break;
+        case 3:
+            loginEmployee();
+            break;
+        case 4:
+            runWarehouseMenu();
+            break;
         }
-    }
+    } while (choice != 0);
+    std::cout << "До свидания!\n";
 }
 
-void Menu::showCustomers() const
+// ===================== каталог =====================
+
+void Menu::runCatalogMenu() const
 {
-    std::cout << "\nСписок клиентов:\n";
-    std::cout << std::left << std::setw(30) << "Имя" << std::setw(30) << "Email" << std::setw(40) << "Адрес" << "Баланс (BYN)\n";
-    for (const auto &c : customers_)
+    int c;
+    do
     {
-        std::cout << std::left << std::setw(30) << c.getName() << std::setw(30) << c.getEmail() << std::setw(40) << c.getAddressStr() << c.getBalance() << "\n";
-    }
+        std::cout << "\n--- Каталог ---\n"
+                     "1. Все книги\n"
+                     "2. Сортировать по наличию\n"
+                     "3. Поиск по названию или автору\n"
+                     "4. Найти по ISBN\n"
+                     "5. Подробнее о книге\n"
+                     "0. Назад\n\nВыбор: ";
+        c = ui::readInt(0, 5);
+        try
+        {
+            if (c == 1)
+                showBooks(false);
+            else if (c == 2)
+                showBooks(true);
+            else if (c == 3)
+                searchBooks();
+            else if (c == 4)
+                findByIsbn();
+            else if (c == 5)
+                showBookDetails();
+        }
+        catch (const std::exception &e)
+        {
+            std::cout << "ОШИБКА: " << e.what() << "\n";
+        }
+    } while (c != 0);
 }
 
-void Menu::depositToCustomer()
+// Печатает таблицу книг. Возвращает соответствие «номер в таблице -> индекс в books_»
+// (при сортировке порядок в таблице отличается от порядка в каталоге).
+std::vector<size_t> Menu::showBooks(bool sortByStock) const
 {
-    showCustomers();
-    std::cout << "Выберите клиента для пополнения: ";
-    int custIndex;
-    std::cin >> custIndex;
-    if (custIndex < 1 || custIndex > static_cast<int>(customers_.size()))
-        return;
+    std::vector<size_t> order(books_.size());
+    for (size_t i = 0; i < order.size(); ++i)
+        order[i] = i;
+    if (sortByStock)
+    {
+        std::stable_sort(order.begin(), order.end(), [this](size_t a, size_t b)
+                         { return books_[a].getStockCount() > books_[b].getStockCount(); });
+    }
 
-    std::cout << "Введите сумму (BYN): ";
-    double amount;
-    std::cin >> amount;
-    customers_[custIndex - 1].deposit(amount);
-    std::cout << "Баланс успешно пополнен!\n";
+    std::cout << "\nСписок книг" << (sortByStock ? " (по убыванию остатка)" : "") << ":\n";
+    std::cout << ui::pad("№", 4) << ui::pad("Название", 28) << ui::pad("Автор", 22)
+              << ui::pad("Жанр", 22) << ui::pad("Цена, BYN", 11) << ui::pad("Остаток", 9) << "Рейтинг\n";
+    std::cout << std::string(104, '-') << "\n";
+
+    for (size_t i = 0; i < order.size(); ++i)
+    {
+        const Book &b = books_[order[i]];
+        std::cout << ui::pad(std::to_string(i + 1), 4)
+                  << ui::pad(b.getTitle(), 28)
+                  << ui::pad(b.getAuthorName(), 22)
+                  << ui::pad(b.getGenreName(), 22)
+                  << ui::pad(ui::money(b.getPriceAmount()), 11)
+                  << ui::pad(b.getStockCount() > 0 ? std::to_string(b.getStockCount()) : "нет", 9);
+        if (b.getRatingScore() > 0)
+            std::cout << ui::money(b.getRatingScore()).substr(0, 3) << "/5";
+        else
+            std::cout << "—";
+        std::cout << "\n";
+    }
+    return order;
 }
 
 void Menu::searchBooks() const
 {
-    std::cout << "\nПоиск книг\n";
-    std::cout << "1. По автору\n2. По названию\nВыбор: ";
-    int choice;
-    std::cin >> choice;
-
-    std::string query;
-    std::cout << "Введите запрос: ";
-    std::cin >> query;
-
+    std::string query = ui::lowerUtf8(ui::ask("Введите часть названия или автора: "));
+    if (query.empty())
+    {
+        std::cout << "Пустой запрос.\n";
+        return;
+    }
     bool found = false;
     for (const auto &b : books_)
     {
-        bool match = false;
-        if (choice == 1 && b.getAuthorName().find(query) != std::string::npos)
-            match = true;
-        if (choice == 2 && b.getTitle().find(query) != std::string::npos)
-            match = true;
-
-        if (match)
+        if (ui::lowerUtf8(b.getTitle()).find(query) != std::string::npos ||
+            ui::lowerUtf8(b.getAuthorName()).find(query) != std::string::npos)
         {
-            std::cout << "Найдено: " << b.getTitle() << " (" << b.getAuthorName() << ")\n";
+            if (!found)
+                std::cout << "Найдено:\n";
+            std::cout << "  - " << b.getTitle() << " (" << b.getAuthorName() << "), "
+                      << ui::money(b.getPriceAmount()) << " BYN, остаток: " << b.getStockCount() << "\n";
             found = true;
         }
     }
@@ -131,313 +284,37 @@ void Menu::searchBooks() const
         std::cout << "Ничего не найдено.\n";
 }
 
-void Menu::showCustomerHistory() const
+void Menu::findByIsbn() const
 {
-    showCustomers();
-    std::cout << "Выберите клиента (номер): ";
-    int custIndex;
-    std::cin >> custIndex;
-    if (custIndex < 1 || custIndex > static_cast<int>(customers_.size()))
-        return;
-
-    std::string targetName = customers_[custIndex - 1].getName();
-    std::cout << "\nИстория заказов клиента " << targetName << ":\n";
-    bool found = false;
-    for (const auto &order : orders_)
+    std::string isbn = ui::ask("Введите ISBN: ");
+    for (const auto &b : books_)
     {
-        if (order.getCustomer().getName() == targetName)
+        if (b.getIsbn() == isbn)
         {
-            std::cout << "Заказ №" << " Статус: " << order.getStatus() << " Сумма: " << order.calculateTotal() << " BYN\n";
-            found = true;
+            std::cout << b.getInfo() << "\nЦена: " << ui::money(b.getPriceAmount()) << " BYN, остаток: " << b.getStockCount() << "\n";
+            return;
         }
     }
-    if (!found)
-        std::cout << "У клиента пока нет заказов.\n";
+    throw BookNotFoundException("Книга с ISBN \"" + isbn + "\" не найдена");
 }
 
-void Menu::showStaff() const
+void Menu::showBookDetails() const
 {
-    std::cout << "\nСписок сотрудников:\n";
-    for (const auto &emp : staff_)
-    {
-        emp->work();
-    }
-}
-
-void Menu::showWarehouse() const
-{
-    std::cout << "\nИнформация о складе:\n";
-    std::cout << "Название: Главный склад\n";
-    std::cout << "Адрес: " << warehouse_.getAddress().getFullAddress() << "\n";
-    std::cout << "Количество секций: " << warehouse_.getTotalSections() << "\n";
-    std::cout << "Оборудование:\n";
-    std::cout << " - Погрузчик: Работает\n";
-    std::cout << " - Сканер: Требуется ремонт\n";
-}
-
-void Menu::createOrder()
-{
-    showCustomers();
-    std::cout << "Выберите клиента (номер): ";
-    int custIndex;
-    std::cin >> custIndex;
-    if (custIndex < 1 || custIndex > static_cast<int>(customers_.size()))
+    auto map = showBooks(false);
+    std::cout << "Выберите книгу (0 - отмена): ";
+    int idx = ui::readInt(0, static_cast<int>(map.size()));
+    if (idx == 0)
         return;
-
-    Customer &customer = customers_[custIndex - 1];
-
-    if (customer.getActiveOrdersCount() >= 2)
-    {
-        std::cout << "У клиента уже 2 активных заказа. Сначала оплатите или отмените их.\n";
-        return;
-    }
-
-    showBooks();
-    std::cout << "Выберите книгу (номер): ";
-    int bookIndex;
-    std::cin >> bookIndex;
-    if (bookIndex < 1 || bookIndex > static_cast<int>(books_.size()))
-        return;
-
-    Book selectedBook = books_[bookIndex - 1];
-    if (!selectedBook.isAvailable())
-    {
-        std::cout << "Этой книги нет в наличии!\n";
-        return;
-    }
-
-    Order newOrder(nextOrderId_++, customer, CustomDate(25, 11, 2026));
-    newOrder.addBook(selectedBook);
-    orders_.push_back(newOrder);
-
-    books_[bookIndex - 1].sellCopy();
-    customer.incrementActiveOrders();
-
-    Invoice inv(nextOrderId_, newOrder);
-    inv.generate();
-    std::cout << "Заказ создан. Сумма к оплате: " << inv.getAmount() << " BYN\n";
-}
-
-void Menu::cancelOrder()
-{
-    if (orders_.empty())
-        return;
-    std::cout << "\nСписок заказов:\n";
-    for (size_t i = 0; i < orders_.size(); ++i)
-    {
-        std::cout << i + 1 << ". Статус: " << orders_[i].getStatus() << "\n";
-    }
-    std::cout << "Выберите заказ для отмены: ";
-    int index;
-    std::cin >> index;
-    if (index < 1 || index > static_cast<int>(orders_.size()))
-        return;
-
-    Order &order = orders_[index - 1];
-    if (order.getStatus() == "Delivered")
-    {
-        std::cout << "Доставленный заказ нельзя отменить!\n";
-        return;
-    }
-
-    for (auto &c : customers_)
-    {
-        if (c.getName() == order.getCustomer().getName())
-        {
-            c.decrementActiveOrders();
-            break;
-        }
-    }
-    order.changeStatus("Cancelled");
-    std::cout << "Заказ отменен. Книга возвращена на склад.\n";
-}
-
-void Menu::payOrder()
-{
-    if (orders_.empty())
-        return;
-    std::cout << "\nСписок заказов:\n";
-    for (size_t i = 0; i < orders_.size(); ++i)
-    {
-        std::cout << i + 1 << ". Статус: " << orders_[i].getStatus() << ". Сумма: " << orders_[i].calculateTotal() << " BYN\n";
-    }
-    std::cout << "Выберите заказ для оплаты: ";
-    int index;
-    std::cin >> index;
-    if (index < 1 || index > static_cast<int>(orders_.size()))
-        return;
-
-    Order &order = orders_[index - 1];
-    if (order.getStatus() != "Created")
-    {
-        std::cout << "Заказ уже оплачен.\n";
-        return;
-    }
-
-    Payment payment(1, order.getCustomer(), Price(order.calculateTotal(), "BYN"));
-    try
-    {
-        payment.processPayment();
-        order.changeStatus("Paid");
-        std::cout << "Оплата прошла успешно!\n";
-    }
-    catch (const std::exception &e)
-    {
-        std::cout << "Ошибка: " << e.what() << "\n";
-    }
-}
-
-void Menu::shipOrder()
-{
-    if (orders_.empty())
-        return;
-    std::cout << "\nСписок заказов:\n";
-    for (size_t i = 0; i < orders_.size(); ++i)
-    {
-        std::cout << i + 1 << ". Статус: " << orders_[i].getStatus() << "\n";
-    }
-    std::cout << "Выберите заказ для отгрузки со склада: ";
-    int index;
-    std::cin >> index;
-    if (index < 1 || index > static_cast<int>(orders_.size()))
-        return;
-
-    Order &order = orders_[index - 1];
-    if (order.getStatus() != "Paid")
-    {
-        std::cout << "Сначала нужно оплатить!\n";
-        return;
-    }
-
-    Shipment shipment(order, warehouse_);
-    shipment.ship();
-    std::cout << "Заказ отгружен со склада.\n";
-}
-
-void Menu::deliverOrder()
-{
-    if (orders_.empty())
-        return;
-    std::cout << "\nСписок заказов:\n";
-    for (size_t i = 0; i < orders_.size(); ++i)
-    {
-        std::cout << i + 1 << ". Статус: " << orders_[i].getStatus() << "\n";
-    }
-    std::cout << "Выберите заказ для доставки: ";
-    int index;
-    std::cin >> index;
-    if (index < 1 || index > static_cast<int>(orders_.size()))
-        return;
-
-    Order &order = orders_[index - 1];
-    if (order.getStatus() != "Shipped")
-    {
-        std::cout << "Сначала отгрузите заказ!\n";
-        return;
-    }
-
-    Delivery delivery(order, order.getCustomer().getAddress());
-    delivery.startDelivery();
-    delivery.completeDelivery();
-    std::cout << "Заказ успешно доставлен.\n";
-}
-
-void Menu::leaveReview()
-{
-    showBooks();
-    std::cout << "Выберите книгу (номер): ";
-    int bookIndex;
-    std::cin >> bookIndex;
-    if (bookIndex < 1 || bookIndex > static_cast<int>(books_.size()))
-        return;
-
-    std::cout << "Введите текст отзыва: ";
-    std::string text;
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    std::getline(std::cin, text);
-
-    std::cout << "Введите оценку (1-5): ";
-    int score;
-    std::cin >> score;
-
-    books_[bookIndex - 1].addReview(Review(text, "Гость"));
-    books_[bookIndex - 1].updateRating(score);
-    std::cout << "Спасибо за отзыв!\n";
-}
-
-void Menu::run()
-{
-    int choice;
-    do
-    {
-        std::cout << "\nМеню книжного склада БГУИР\n";
-        std::cout << "1. Показать книги\n";
-        std::cout << "2. Показать клиентов\n";
-        std::cout << "3. Показать сотрудников\n";
-        std::cout << "4. Информация о складе\n";
-        std::cout << "5. Создать заказ\n";
-        std::cout << "6. Оплатить заказ\n";
-        std::cout << "7. Отгрузить заказ\n";
-        std::cout << "8. Доставить заказ\n";
-        std::cout << "9. Оставить отзыв\n";
-        std::cout << "10. Посмотреть отзывы о книге\n";
-        std::cout << "11. История заказов клиента\n";
-        std::cout << "12. Пополнить баланс клиента\n";
-        std::cout << "13. Поиск книг\n";
-        std::cout << "14. Отменить заказ\n";
-        std::cout << "0. Выход\n";
-        std::cout << "Выбор: ";
-
-        std::cin >> choice;
-        switch (choice)
-        {
-        case 1:
-            showBooks();
-            break;
-        case 2:
-            showCustomers();
-            break;
-        case 3:
-            showStaff();
-            break;
-        case 4:
-            showWarehouse();
-            break;
-        case 5:
-            createOrder();
-            break;
-        case 6:
-            payOrder();
-            break;
-        case 7:
-            shipOrder();
-            break;
-        case 8:
-            deliverOrder();
-            break;
-        case 9:
-            leaveReview();
-            break;
-        case 10:
-            showBookDetails();
-            break;
-        case 11:
-            showCustomerHistory();
-            break;
-        case 12:
-            depositToCustomer();
-            break;
-        case 13:
-            searchBooks();
-            break;
-        case 14:
-            cancelOrder();
-            break;
-        case 0:
-            std::cout << "Выход...\n";
-            break;
-        default:
-            std::cout << "Неверный пункт.\n";
-        }
-    } while (choice != 0);
+    const Book &b = books_[map[idx - 1]];
+    std::cout << "\n" << b.getInfo()
+              << "\nISBN: " << b.getIsbn()
+              << "\nЦена: " << ui::money(b.getPriceAmount()) << " BYN"
+              << "\nВ наличии: " << b.getStockCount() << " шт."
+              << "\nРейтинг: " << (b.getRatingScore() > 0 ? ui::money(b.getRatingScore()).substr(0, 3) + "/5" : std::string("пока нет оценок"))
+              << "\nОтзывы:\n";
+    if (b.getReviews().empty())
+        std::cout << "  Пока нет отзывов.\n";
+    else
+        for (const auto &r : b.getReviews())
+            std::cout << "  [" << r.getAuthor() << "]: " << r.getText() << "\n";
 }

@@ -19,6 +19,11 @@ public:
     void addBook(Book book);
     double calculateTotal() const;
     void changeStatus(std::string newStatus);
+
     std::string getStatus() const;
     Customer getCustomer() const;
+    std::string getFirstBookTitle() const;
+    int getId() const;
+    std::vector<std::string> getBookTitles() const;
+    CustomDate getDate() const;
 };

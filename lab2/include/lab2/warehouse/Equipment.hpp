@@ -10,5 +10,6 @@ private:
 public:
     Equipment(std::string name, bool isWorking);
     bool checkStatus() const;
+    std::string getName() const;
     void repair();
 };

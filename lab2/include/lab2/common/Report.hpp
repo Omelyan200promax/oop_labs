@@ -10,4 +10,5 @@ public:
     Report(std::string title);
     void setContent(std::string content);
     std::string getTitle() const;
+    std::string getContent() const;
 };

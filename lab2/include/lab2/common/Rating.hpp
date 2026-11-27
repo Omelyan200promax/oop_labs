@@ -1,10 +1,13 @@
 ﻿#pragma once
+
 class Rating
 {
 private:
-    int score_;
+    double totalScore_;
+    int count_;
 
 public:
-    Rating(int score);
-    int getScore() const;
+    Rating();
+    void addScore(int score);
+    double getScore() const;
 };

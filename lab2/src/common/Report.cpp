@@ -2,3 +2,4 @@
 Report::Report(std::string title) : title_(title) {}
 void Report::setContent(std::string content) { content_ = content; }
 std::string Report::getTitle() const { return title_; }
+std::string Report::getContent() const { return content_; }

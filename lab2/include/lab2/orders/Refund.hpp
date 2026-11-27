@@ -11,4 +11,5 @@ private:
 public:
     Refund(ReturnRequest request, Price amount);
     void processRefund();
+    double getAmount() const;
 };

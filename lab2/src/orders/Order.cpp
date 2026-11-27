@@ -30,3 +30,20 @@ void Order::changeStatus(std::string newStatus)
 
 std::string Order::getStatus() const { return status_; }
 Customer Order::getCustomer() const { return customer_; }
+std::string Order::getFirstBookTitle() const
+{
+    if (!books_.empty())
+        return books_[0].getTitle();
+    return "Пусто";
+}
+
+int Order::getId() const { return id_; }
+CustomDate Order::getDate() const { return orderDate_; }
+
+std::vector<std::string> Order::getBookTitles() const
+{
+    std::vector<std::string> titles;
+    for (const auto &b : books_)
+        titles.push_back(b.getTitle());
+    return titles;
+}

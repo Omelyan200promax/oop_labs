@@ -7,6 +7,7 @@ private:
     std::string shift_;
 
 public:
-    Storekeeper(std::string name, int id, double salary, std::string shift);
+    Storekeeper(std::string name, int id, double salary, Role role, std::string shift);
     void work() override;
+    void sortBooks();
 };

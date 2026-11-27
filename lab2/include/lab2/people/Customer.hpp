@@ -2,6 +2,8 @@
 #include <string>
 #include "lab2/common/ContactInfo.hpp"
 #include "lab2/common/Address.hpp"
+#include "lab2/common/Notification.hpp"
+#include <vector>
 
 class Customer
 {
@@ -11,6 +13,8 @@ private:
     Address address_;
     double balance_;
     int activeOrdersCount_ = 0;
+    std::vector<Notification> notifications_;
+    std::vector<int> orderIds_; // Храним ID заказов, а не сами заказы
 
 public:
     Customer(std::string name, ContactInfo contact, Address address, double balance);
@@ -26,4 +30,9 @@ public:
     double getBalance() const;
     int getActiveOrdersCount() const;
     Address getAddress() const;
+
+    void addNotification(const Notification &notif);
+    std::vector<Notification> &getNotifications();
+    void addOrderId(int orderId);
+    std::vector<int> getOrderIds() const;
 };

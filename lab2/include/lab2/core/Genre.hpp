@@ -9,5 +9,7 @@ private:
 
 public:
     Genre(std::string name, std::string description);
+
     std::string getDescription() const;
+    std::string getName() const;
 };

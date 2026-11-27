@@ -12,4 +12,8 @@ public:
     CustomDate(int day, int month, int year);
     std::string toString() const;
     bool isLeapYear() const;
+    int getDay() const;
+    int getMonth() const;
+    int getYear() const;
+    bool operator<=(const CustomDate &other) const;
 };

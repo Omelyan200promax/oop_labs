@@ -3,8 +3,11 @@
 SupplyContract::SupplyContract(Supplier supplier, CustomDate start, CustomDate end)
     : supplier_(supplier), startDate_(start), endDate_(end) {}
 
-// Упрощенная проверка (для учебной лабы просто возвращаем true)
+// Договор действует, если текущая дата лежит в промежутке [start, end]
 bool SupplyContract::isActive(CustomDate currentDate) const
 {
-    return true;
+    return startDate_ <= currentDate && currentDate <= endDate_;
 }
+
+Supplier &SupplyContract::getSupplier() { return supplier_; }
+CustomDate SupplyContract::getEndDate() const { return endDate_; }

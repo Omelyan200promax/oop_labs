@@ -26,7 +26,9 @@ add_library(lab2_lib ${LAB2_SOURCES})
 target_include_directories(lab2_lib PUBLIC include)
 
 # CLI
-add_executable(lab2_cli app/main.cpp app/menu.cpp)
+file(GLOB LAB2_APP_SOURCES "app/*.cpp")
+add_executable(lab2_cli ${LAB2_APP_SOURCES})
+target_include_directories(lab2_cli PRIVATE app)
 target_link_libraries(lab2_cli PRIVATE lab2_lib)
 
 # Tests

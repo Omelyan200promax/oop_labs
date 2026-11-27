@@ -2,8 +2,6 @@
 #include <string>
 #include <vector>
 #include "lab2/warehouse/Section.hpp"
-#include "lab2/warehouse/Equipment.hpp"
-#include "lab2/warehouse/InventoryCheck.hpp"
 #include "lab2/common/Address.hpp"
 #include "lab2/common/ContactInfo.hpp"
 
@@ -14,15 +12,16 @@ private:
     Address address_;
     ContactInfo contact_;
     std::vector<Section> sections_;
-    std::vector<Equipment> equipment_;
+    int nextBoxId_ = 1;
 
 public:
-    // Изменили конструктор
     Warehouse(std::string name, Address address, ContactInfo contact);
     void addSection(Section section);
-    void addEquipment(Equipment eq);
-    void performCheck(InventoryCheck &check);
+    void printFullStructure() const; // Метод для глубокого вывода
 
-    Address getAddress() const;
-    int getTotalSections() const;
+    // Физическое хранение книг: кладёт книгу в первую секцию, где есть место
+    bool storeBook(double weight, const std::string &title);
+    bool removeBook(const std::string &title);
+    int countBook(const std::string &title) const;
+    int getTotalStored() const;
 };

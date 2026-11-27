@@ -12,4 +12,6 @@ private:
 public:
     SupplyContract(Supplier supplier, CustomDate start, CustomDate end);
     bool isActive(CustomDate currentDate) const;
+    Supplier &getSupplier();
+    CustomDate getEndDate() const;
 };

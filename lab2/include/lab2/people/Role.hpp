@@ -10,4 +10,6 @@ private:
 public:
     Role(std::string title, int accessLevel);
     bool hasAccess(int requiredLevel) const;
+    std::string getTitle() const;
+    int getAccessLevel() const;
 };

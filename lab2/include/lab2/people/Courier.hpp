@@ -7,6 +7,7 @@ private:
     std::string vehicle_;
 
 public:
-    Courier(std::string name, int id, double salary, std::string vehicle);
+    Courier(std::string name, int id, double salary, Role role, std::string vehicle);
     void work() override;
+    void deliverOrder();
 };

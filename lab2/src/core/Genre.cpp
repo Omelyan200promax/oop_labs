@@ -6,3 +6,5 @@ std::string Genre::getDescription() const
 {
     return name_ + ": " + description_;
 }
+
+std::string Genre::getName() const { return name_; }

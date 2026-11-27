@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include <string>
 #include "lab2/common/ContactInfo.hpp"
+#include "lab2/core/Book.hpp"
 
 class Supplier
 {
@@ -10,5 +11,5 @@ private:
 
 public:
     Supplier(std::string companyName, ContactInfo contact);
-    void sendSupply();
+    void supplyBooks(Book &book, int count);
 };

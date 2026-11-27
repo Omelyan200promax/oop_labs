@@ -7,6 +7,8 @@ private:
     std::string department_;
 
 public:
-    Manager(std::string name, int id, double salary, std::string department);
+    Manager(std::string name, int id, double salary, Role role, std::string department);
     void work() override;
+    void createReport();
+    void applyDiscountToBook();
 };
