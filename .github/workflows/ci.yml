@@ -33,11 +33,9 @@ jobs:
             mingw-w64-ucrt-x86_64-cmake
             mingw-w64-ucrt-x86_64-ninja
             mingw-w64-ucrt-x86_64-cppcheck
-            mingw-w64-ucrt-x86_64-python
-            mingw-w64-ucrt-x86_64-python-pip
+            mingw-w64-ucrt-x86_64-gcovr
 
-      - name: Установить gcovr
-        run: python -m pip install gcovr --break-system-packages
+     
 
       #  Лабораторная 1
       - name: Настроить CMake lab1 (с покрытием)
