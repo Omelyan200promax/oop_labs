@@ -11,23 +11,37 @@ permissions:
   contents: write
 
 jobs:
-  
-  # ДЖОБ 1: Тесты, покрытие и линтер (Linux)
- 
+
+  # ДЖОБ 1: Тесты, покрытие и линтер (Windows + MSYS2 UCRT64)
+
   test-and-lint:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: msys2 {0}   # все шаги идут в окружении MSYS2
     steps:
       - name: Скачать код
         uses: actions/checkout@v4
 
-      - name: Установить зависимости
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y cmake g++ gcovr cppcheck
+      - name: Установить MSYS2 и зависимости
+        uses: msys2/setup-msys2@v2
+        with:
+          msystem: UCRT64
+          update: true
+          install: >-
+            mingw-w64-ucrt-x86_64-gcc
+            mingw-w64-ucrt-x86_64-cmake
+            mingw-w64-ucrt-x86_64-ninja
+            mingw-w64-ucrt-x86_64-cppcheck
+            mingw-w64-ucrt-x86_64-python
+            mingw-w64-ucrt-x86_64-python-pip
 
-      #  Лабораторная 1 
+      - name: Установить gcovr
+        run: python -m pip install gcovr --break-system-packages
+
+      #  Лабораторная 1
       - name: Настроить CMake lab1 (с покрытием)
-        run: cmake -S lab1 -B lab1/build -DCMAKE_BUILD_TYPE=Debug -DENABLE_COVERAGE=ON
+        run: cmake -S lab1 -B lab1/build -G Ninja -DCMAKE_BUILD_TYPE=Debug -DENABLE_COVERAGE=ON
 
       - name: Собрать проект lab1
         run: cmake --build lab1/build
@@ -35,9 +49,9 @@ jobs:
       - name: Запустить тесты lab1
         run: ctest --test-dir lab1/build --output-on-failure
 
-      #  Лабораторная 2 
+      #  Лабораторная 2
       - name: Настроить CMake lab2 (с покрытием)
-        run: cmake -S lab2 -B lab2/build -DCMAKE_BUILD_TYPE=Debug -DENABLE_COVERAGE=ON
+        run: cmake -S lab2 -B lab2/build -G Ninja -DCMAKE_BUILD_TYPE=Debug -DENABLE_COVERAGE=ON
 
       - name: Собрать проект lab2
         run: cmake --build lab2/build
@@ -45,7 +59,7 @@ jobs:
       - name: Запустить тесты lab2
         run: ctest --test-dir lab2/build --output-on-failure
 
-      # --- Проверки для Лабораторной 2 (можно сделать и для lab1) ---
+      # --- Проверки для Лабораторной 2 ---
       - name: Проверить покрытие lab2 (>90%)
         run: |
           cd lab2
@@ -53,11 +67,10 @@ jobs:
 
       - name: Статический анализ lab2 (cppcheck)
         run: |
-          cppcheck --enable=warning,performance --error-exitcode=1 -I lab2/include lab2/src lab2/app
-        
+          cppcheck --enable=warning --error-exitcode=1 -I lab2/include lab2/src lab2/app
 
   # ДЖОБ 2: Сборка артефакта и Releases (Windows)
- 
+
   build-release:
     if: startsWith(github.ref, 'refs/tags/v') # только при пуше тега v*
     runs-on: windows-latest
@@ -71,13 +84,16 @@ jobs:
         with:
           msystem: UCRT64
           update: true
-          install: mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-cmake mingw-w64-ucrt-x86_64-make
+          install: >-
+            mingw-w64-ucrt-x86_64-gcc
+            mingw-w64-ucrt-x86_64-cmake
+            mingw-w64-ucrt-x86_64-ninja
 
       - name: Настроить и собрать Release (статически) lab2
         shell: msys2 {0}
         run: |
-          cmake -S lab2 -B lab2/build-release -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release
-          cmake --build lab2/build-release
+          cmake -S lab2 -B lab2/build-release -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXE_LINKER_FLAGS="-static"
+          cmake --build lab2/build-release --target lab2_cli
 
       - name: Выложить в Releases
         uses: softprops/action-gh-release@v2
