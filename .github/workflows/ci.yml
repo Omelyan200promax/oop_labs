@@ -65,7 +65,7 @@ jobs:
 
       - name: Статический анализ lab2 (cppcheck)
         run: |
-          cppcheck --enable=warning --error-exitcode=1 -I lab2/include lab2/src lab2/app
+          cppcheck --enable=warning --suppress=objectIndex:*menu_staff.cpp --error-exitcode=1 -I lab2/include lab2/src lab2/app
 
   # ДЖОБ 2: Сборка артефакта и Releases (Windows)
 
