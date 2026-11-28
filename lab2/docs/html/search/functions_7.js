@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['incrementactiveorders_0',['incrementActiveOrders',['../class_customer.html#af4766660cde2f995e8c53757ade4d7c9',1,'Customer']]],
+  ['invalidbookdataexception_1',['InvalidBookDataException',['../class_invalid_book_data_exception.html#a456f8a4f7ac560ccd4b209bb5f5c43ea',1,'InvalidBookDataException']]],
+  ['invaliddimensionsexception_2',['InvalidDimensionsException',['../class_invalid_dimensions_exception.html#a3e7b2e960a2cb36a2d9f55c0ea543614',1,'InvalidDimensionsException']]],
+  ['invalidorderexception_3',['InvalidOrderException',['../class_invalid_order_exception.html#a986e28b48d6233c4443583d065cf13b1',1,'InvalidOrderException']]],
+  ['invalidpaymentexception_4',['InvalidPaymentException',['../class_invalid_payment_exception.html#a22377cab20eb358e849b06bdfde69d52',1,'InvalidPaymentException']]],
+  ['inventorycheck_5',['InventoryCheck',['../class_inventory_check.html#a0cd5756da06c51de3b5f58eb5099f859',1,'InventoryCheck']]],
+  ['inventorymismatchexception_6',['InventoryMismatchException',['../class_inventory_mismatch_exception.html#ac1f91b4a00a81336b57f427495683956',1,'InventoryMismatchException']]],
+  ['invoice_7',['Invoice',['../class_invoice.html#aa74de576f3e53fd43e66db145ff16704',1,'Invoice']]],
+  ['isactive_8',['isActive',['../class_supply_contract.html#a2c69edd2e1be8a94b00eb1fa51600036',1,'SupplyContract']]],
+  ['isapproved_9',['isApproved',['../class_return_request.html#a588cf2a4a0bd9ab7be803f452c621e3e',1,'ReturnRequest']]],
+  ['isavailable_10',['isAvailable',['../class_book.html#ac4292948dfd94bcaa0862d009cf32358',1,'Book']]],
+  ['iscompleted_11',['isCompleted',['../class_inventory_check.html#ab3157ca2584622e4944326e8e71fa918',1,'InventoryCheck']]],
+  ['isdelivered_12',['isDelivered',['../class_delivery.html#a1e49bef34ac03bb1ae2428e7fe2c21b8',1,'Delivery']]],
+  ['ishardcover_13',['isHardCover',['../class_cover_type.html#ad113b4d11c59e853684b3367cd034f7b',1,'CoverType']]],
+  ['isleapyear_14',['isLeapYear',['../class_custom_date.html#a7b16700fea97e6a5f854f95a54e8b764',1,'CustomDate']]],
+  ['isread_15',['isRead',['../class_notification.html#a998dd3a184f8474657c2b986b2441f52',1,'Notification']]]
+];

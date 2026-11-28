@@ -1,0 +1,485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab2 - Книжный склад: Класс Box</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab2 - Книжный склад
+   </div>
+   <div id="projectbrief">Лабораторная работа №2: классы предметной области и консольное меню</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_box.html','','class_box-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс Box</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Коробка с книгами, ограниченная по суммарному весу.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_box_8hpp_source.html">Box.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:abd4120e524c67d0aac6aea66e4c985f1" id="r_abd4120e524c67d0aac6aea66e4c985f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd4120e524c67d0aac6aea66e4c985f1">Box</a> (int id, double maxWeight)</td></tr>
+<tr class="memdesc:abd4120e524c67d0aac6aea66e4c985f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт пустую коробку.  <br /></td></tr>
+<tr class="memitem:acadd2864195e7cabe06b7cdcbd47c586" id="r_acadd2864195e7cabe06b7cdcbd47c586"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acadd2864195e7cabe06b7cdcbd47c586">putBook</a> (double weight, const std::string &amp;title)</td></tr>
+<tr class="memdesc:acadd2864195e7cabe06b7cdcbd47c586"><td class="mdescLeft">&#160;</td><td class="mdescRight">Кладёт книгу в коробку.  <br /></td></tr>
+<tr class="memitem:ab088507b89165929333aef77d45f7c99" id="r_ab088507b89165929333aef77d45f7c99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab088507b89165929333aef77d45f7c99">removeBook</a> (const std::string &amp;title)</td></tr>
+<tr class="memdesc:ab088507b89165929333aef77d45f7c99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Достаёт одну книгу с указанным названием.  <br /></td></tr>
+<tr class="memitem:adef239f1aa63e00acabe463687fd1c7a" id="r_adef239f1aa63e00acabe463687fd1c7a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adef239f1aa63e00acabe463687fd1c7a">countBook</a> (const std::string &amp;title) const</td></tr>
+<tr class="memdesc:adef239f1aa63e00acabe463687fd1c7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Считает экземпляры книги в коробке.  <br /></td></tr>
+<tr class="memitem:add3258e9c7f218d4f92eb7211671c77a" id="r_add3258e9c7f218d4f92eb7211671c77a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add3258e9c7f218d4f92eb7211671c77a">getId</a> () const</td></tr>
+<tr class="memdesc:add3258e9c7f218d4f92eb7211671c77a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Номер коробки.  <br /></td></tr>
+<tr class="memitem:a06d37e73cf5e0c5fe93b91b9ee08d0a9" id="r_a06d37e73cf5e0c5fe93b91b9ee08d0a9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06d37e73cf5e0c5fe93b91b9ee08d0a9">getCurrentWeight</a> () const</td></tr>
+<tr class="memdesc:a06d37e73cf5e0c5fe93b91b9ee08d0a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Текущий вес.  <br /></td></tr>
+<tr class="memitem:abf9ab27574e7ad9ee51895dcfb651f42" id="r_abf9ab27574e7ad9ee51895dcfb651f42"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf9ab27574e7ad9ee51895dcfb651f42">getMaxWeight</a> () const</td></tr>
+<tr class="memdesc:abf9ab27574e7ad9ee51895dcfb651f42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Предельный вес.  <br /></td></tr>
+<tr class="memitem:ac13fd5e15ab1436c47d3aa69d15806b2" id="r_ac13fd5e15ab1436c47d3aa69d15806b2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac13fd5e15ab1436c47d3aa69d15806b2">getContents</a> () const</td></tr>
+<tr class="memdesc:ac13fd5e15ab1436c47d3aa69d15806b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Содержимое коробки.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:ae2033b6d60f42f799f51c371b6a94370" id="r_ae2033b6d60f42f799f51c371b6a94370"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2033b6d60f42f799f51c371b6a94370">id_</a></td></tr>
+<tr class="memdesc:ae2033b6d60f42f799f51c371b6a94370"><td class="mdescLeft">&#160;</td><td class="mdescRight">Номер коробки.  <br /></td></tr>
+<tr class="memitem:a51deab14ca59abf51d0661e8049dd813" id="r_a51deab14ca59abf51d0661e8049dd813"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51deab14ca59abf51d0661e8049dd813">maxWeight_</a></td></tr>
+<tr class="memdesc:a51deab14ca59abf51d0661e8049dd813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Максимально допустимый вес, кг.  <br /></td></tr>
+<tr class="memitem:a14db434449586a5039c813f563b23608" id="r_a14db434449586a5039c813f563b23608"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14db434449586a5039c813f563b23608">currentWeight_</a></td></tr>
+<tr class="memdesc:a14db434449586a5039c813f563b23608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Текущий вес содержимого, кг.  <br /></td></tr>
+<tr class="memitem:a5c86e87cba6c64ae1caa7dd17ba2c088" id="r_a5c86e87cba6c64ae1caa7dd17ba2c088"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c86e87cba6c64ae1caa7dd17ba2c088">bookTitles_</a></td></tr>
+<tr class="memdesc:a5c86e87cba6c64ae1caa7dd17ba2c088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Названия книг в коробке.  <br /></td></tr>
+<tr class="memitem:a763edb518a34333fe6aa35144d7f3ceb" id="r_a763edb518a34333fe6aa35144d7f3ceb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a763edb518a34333fe6aa35144d7f3ceb">bookWeights_</a></td></tr>
+<tr class="memdesc:a763edb518a34333fe6aa35144d7f3ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вес каждой книги (параллельно bookTitles_), кг.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Коробка с книгами, ограниченная по суммарному весу. </p>
+<p>Хранит названия книг и вес каждой, чтобы при извлечении корректно уменьшать вес коробки. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_box_8hpp_source.html">Box.hpp</a> строка <a class="el" href="_box_8hpp_source.html#l00013">13</a></p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="abd4120e524c67d0aac6aea66e4c985f1" name="abd4120e524c67d0aac6aea66e4c985f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd4120e524c67d0aac6aea66e4c985f1">&#9670;&#160;</a></span>Box()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Box::Box </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>maxWeight</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создаёт пустую коробку. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Номер коробки. </td></tr>
+    <tr><td class="paramname">maxWeight</td><td>Максимальный вес, кг. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="adef239f1aa63e00acabe463687fd1c7a" name="adef239f1aa63e00acabe463687fd1c7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adef239f1aa63e00acabe463687fd1c7a">&#9670;&#160;</a></span>countBook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Box::countBook </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Считает экземпляры книги в коробке. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>Название книги. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Количество экземпляров. </dd></dl>
+
+</div>
+</div>
+<a id="ac13fd5e15ab1436c47d3aa69d15806b2" name="ac13fd5e15ab1436c47d3aa69d15806b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac13fd5e15ab1436c47d3aa69d15806b2">&#9670;&#160;</a></span>getContents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; Box::getContents </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Содержимое коробки. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Названия книг (по одному на экземпляр). </dd></dl>
+
+</div>
+</div>
+<a id="a06d37e73cf5e0c5fe93b91b9ee08d0a9" name="a06d37e73cf5e0c5fe93b91b9ee08d0a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06d37e73cf5e0c5fe93b91b9ee08d0a9">&#9670;&#160;</a></span>getCurrentWeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Box::getCurrentWeight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Текущий вес. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Вес содержимого, кг. </dd></dl>
+
+</div>
+</div>
+<a id="add3258e9c7f218d4f92eb7211671c77a" name="add3258e9c7f218d4f92eb7211671c77a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add3258e9c7f218d4f92eb7211671c77a">&#9670;&#160;</a></span>getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Box::getId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Номер коробки. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Идентификатор. </dd></dl>
+
+</div>
+</div>
+<a id="abf9ab27574e7ad9ee51895dcfb651f42" name="abf9ab27574e7ad9ee51895dcfb651f42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf9ab27574e7ad9ee51895dcfb651f42">&#9670;&#160;</a></span>getMaxWeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Box::getMaxWeight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Предельный вес. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Максимальный вес, кг. </dd></dl>
+
+</div>
+</div>
+<a id="acadd2864195e7cabe06b7cdcbd47c586" name="acadd2864195e7cabe06b7cdcbd47c586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acadd2864195e7cabe06b7cdcbd47c586">&#9670;&#160;</a></span>putBook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Box::putBook </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>weight</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Кладёт книгу в коробку. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">weight</td><td>Вес книги, кг. </td></tr>
+    <tr><td class="paramname">title</td><td>Название книги. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если книга поместилась по весу; иначе false (коробка не меняется). </dd></dl>
+
+</div>
+</div>
+<a id="ab088507b89165929333aef77d45f7c99" name="ab088507b89165929333aef77d45f7c99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab088507b89165929333aef77d45f7c99">&#9670;&#160;</a></span>removeBook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Box::removeBook </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Достаёт одну книгу с указанным названием. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>Название книги. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если книга найдена и извлечена. </dd></dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a5c86e87cba6c64ae1caa7dd17ba2c088" name="a5c86e87cba6c64ae1caa7dd17ba2c088"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c86e87cba6c64ae1caa7dd17ba2c088">&#9670;&#160;</a></span>bookTitles_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; Box::bookTitles_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Названия книг в коробке. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_box_8hpp_source.html">Box.hpp</a> строка <a class="el" href="_box_8hpp_source.html#l00019">19</a></p>
+
+</div>
+</div>
+<a id="a763edb518a34333fe6aa35144d7f3ceb" name="a763edb518a34333fe6aa35144d7f3ceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a763edb518a34333fe6aa35144d7f3ceb">&#9670;&#160;</a></span>bookWeights_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; Box::bookWeights_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Вес каждой книги (параллельно bookTitles_), кг. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_box_8hpp_source.html">Box.hpp</a> строка <a class="el" href="_box_8hpp_source.html#l00020">20</a></p>
+
+</div>
+</div>
+<a id="a14db434449586a5039c813f563b23608" name="a14db434449586a5039c813f563b23608"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14db434449586a5039c813f563b23608">&#9670;&#160;</a></span>currentWeight_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Box::currentWeight_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Текущий вес содержимого, кг. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_box_8hpp_source.html">Box.hpp</a> строка <a class="el" href="_box_8hpp_source.html#l00018">18</a></p>
+
+</div>
+</div>
+<a id="ae2033b6d60f42f799f51c371b6a94370" name="ae2033b6d60f42f799f51c371b6a94370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2033b6d60f42f799f51c371b6a94370">&#9670;&#160;</a></span>id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Box::id_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Номер коробки. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_box_8hpp_source.html">Box.hpp</a> строка <a class="el" href="_box_8hpp_source.html#l00016">16</a></p>
+
+</div>
+</div>
+<a id="a51deab14ca59abf51d0661e8049dd813" name="a51deab14ca59abf51d0661e8049dd813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51deab14ca59abf51d0661e8049dd813">&#9670;&#160;</a></span>maxWeight_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Box::maxWeight_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Максимально допустимый вес, кг. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_box_8hpp_source.html">Box.hpp</a> строка <a class="el" href="_box_8hpp_source.html#l00017">17</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>include/lab2/warehouse/<a class="el" href="_box_8hpp_source.html">Box.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_box.html">Box</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

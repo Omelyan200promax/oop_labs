@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab2 - Книжный склад: Класс Accountant</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab2 - Книжный склад
+   </div>
+   <div id="projectbrief">Лабораторная работа №2: классы предметной области и консольное меню</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_accountant.html','','class_accountant-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс Accountant</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Бухгалтер.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_accountant_8hpp_source.html">Accountant.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:Accountant:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_accountant.png" usemap="#Accountant_map" alt=""/>
+  <map id="Accountant_map" name="Accountant_map">
+<area href="class_employee.html" title="Сотрудник склада — базовый класс иерархии сотрудников." alt="Employee" shape="rect" coords="0,0,76,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa638b8d37bac319edea097c9f72933b1" id="r_aa638b8d37bac319edea097c9f72933b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa638b8d37bac319edea097c9f72933b1">Accountant</a> (std::string name, int id, double salary, <a class="el" href="class_role.html">Role</a> role, std::string taxId)</td></tr>
+<tr class="memdesc:aa638b8d37bac319edea097c9f72933b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт бухгалтера.  <br /></td></tr>
+<tr class="memitem:a8dd2f8fc4175e8e27d02c89e59a45cca" id="r_a8dd2f8fc4175e8e27d02c89e59a45cca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8dd2f8fc4175e8e27d02c89e59a45cca">work</a> () override</td></tr>
+<tr class="memdesc:a8dd2f8fc4175e8e27d02c89e59a45cca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Работа бухгалтера: печатает сообщение о начислении зарплаты.  <br /></td></tr>
+<tr class="memitem:a8311972d15e03ef787f2b244a413fb8c" id="r_a8311972d15e03ef787f2b244a413fb8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8311972d15e03ef787f2b244a413fb8c">calculateSalary</a> (<a class="el" href="class_employee.html">Employee</a> &amp;emp)</td></tr>
+<tr class="memdesc:a8311972d15e03ef787f2b244a413fb8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Начисляет зарплату сотруднику.  <br /></td></tr>
+<tr class="inherit_header pub_methods_class_employee"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_employee')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Открытые члены унаследованные от <a class="el" href="class_employee.html">Employee</a></td></tr>
+<tr class="memitem:a6146899a27321ab9b183ec44502cf2bc inherit pub_methods_class_employee" id="r_a6146899a27321ab9b183ec44502cf2bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_employee.html#a6146899a27321ab9b183ec44502cf2bc">Employee</a> (std::string name, int id, double salary, <a class="el" href="class_role.html">Role</a> role)</td></tr>
+<tr class="memdesc:a6146899a27321ab9b183ec44502cf2bc inherit pub_methods_class_employee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт сотрудника.  <br /></td></tr>
+<tr class="memitem:ad78934ca7e3f6c151e6a4f8209f19aaf inherit pub_methods_class_employee" id="r_ad78934ca7e3f6c151e6a4f8209f19aaf"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_employee.html#ad78934ca7e3f6c151e6a4f8209f19aaf">getName</a> () const</td></tr>
+<tr class="memdesc:ad78934ca7e3f6c151e6a4f8209f19aaf inherit pub_methods_class_employee"><td class="mdescLeft">&#160;</td><td class="mdescRight">ФИО сотрудника.  <br /></td></tr>
+<tr class="memitem:a046fa9b5f8785c8c97dcb38ee7e801f9 inherit pub_methods_class_employee" id="r_a046fa9b5f8785c8c97dcb38ee7e801f9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_employee.html#a046fa9b5f8785c8c97dcb38ee7e801f9">getSalary</a> () const</td></tr>
+<tr class="memdesc:a046fa9b5f8785c8c97dcb38ee7e801f9 inherit pub_methods_class_employee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зарплата.  <br /></td></tr>
+<tr class="memitem:ac09c991d2a57bfc7ce996ba181d355b9 inherit pub_methods_class_employee" id="r_ac09c991d2a57bfc7ce996ba181d355b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_role.html">Role</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_employee.html#ac09c991d2a57bfc7ce996ba181d355b9">getRole</a> () const</td></tr>
+<tr class="memdesc:ac09c991d2a57bfc7ce996ba181d355b9 inherit pub_methods_class_employee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Роль сотрудника.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:aa8c349e37ea91cef59f44cd5b0d8b2e9" id="r_aa8c349e37ea91cef59f44cd5b0d8b2e9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8c349e37ea91cef59f44cd5b0d8b2e9">taxId_</a></td></tr>
+<tr class="memdesc:aa8c349e37ea91cef59f44cd5b0d8b2e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">УНП (налоговый номер).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_employee"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_employee')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Защищенные данные унаследованные от <a class="el" href="class_employee.html">Employee</a></td></tr>
+<tr class="memitem:a61cad87d1bfb96467a355a278bbf5f24 inherit pro_attribs_class_employee" id="r_a61cad87d1bfb96467a355a278bbf5f24"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_employee.html#a61cad87d1bfb96467a355a278bbf5f24">name_</a></td></tr>
+<tr class="memdesc:a61cad87d1bfb96467a355a278bbf5f24 inherit pro_attribs_class_employee"><td class="mdescLeft">&#160;</td><td class="mdescRight">ФИО.  <br /></td></tr>
+<tr class="memitem:a83fa5faaa851e55183193f2a9e411513 inherit pro_attribs_class_employee" id="r_a83fa5faaa851e55183193f2a9e411513"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_employee.html#a83fa5faaa851e55183193f2a9e411513">id_</a></td></tr>
+<tr class="memdesc:a83fa5faaa851e55183193f2a9e411513 inherit pro_attribs_class_employee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Табельный номер.  <br /></td></tr>
+<tr class="memitem:a774298a56028e3958d64c97dea41111c inherit pro_attribs_class_employee" id="r_a774298a56028e3958d64c97dea41111c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_employee.html#a774298a56028e3958d64c97dea41111c">salary_</a></td></tr>
+<tr class="memdesc:a774298a56028e3958d64c97dea41111c inherit pro_attribs_class_employee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зарплата, BYN.  <br /></td></tr>
+<tr class="memitem:ad6a647bede5a0a28b561af1a5d80ac4b inherit pro_attribs_class_employee" id="r_ad6a647bede5a0a28b561af1a5d80ac4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_role.html">Role</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_employee.html#ad6a647bede5a0a28b561af1a5d80ac4b">role_</a></td></tr>
+<tr class="memdesc:ad6a647bede5a0a28b561af1a5d80ac4b inherit pro_attribs_class_employee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Роль (должность и уровень доступа).  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Бухгалтер. </p>
+<p>Наследуется от <a class="el" href="class_employee.html" title="Сотрудник склада — базовый класс иерархии сотрудников.">Employee</a>, переопределяет <a class="el" href="#a8dd2f8fc4175e8e27d02c89e59a45cca" title="Работа бухгалтера: печатает сообщение о начислении зарплаты.">work()</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_accountant_8hpp_source.html">Accountant.hpp</a> строка <a class="el" href="_accountant_8hpp_source.html#l00012">12</a></p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="aa638b8d37bac319edea097c9f72933b1" name="aa638b8d37bac319edea097c9f72933b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa638b8d37bac319edea097c9f72933b1">&#9670;&#160;</a></span>Accountant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Accountant::Accountant </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>salary</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_role.html">Role</a></td>          <td class="paramname"><span class="paramname"><em>role</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>taxId</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создаёт бухгалтера. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>ФИО. </td></tr>
+    <tr><td class="paramname">id</td><td>Табельный номер. </td></tr>
+    <tr><td class="paramname">salary</td><td>Зарплата. </td></tr>
+    <tr><td class="paramname">role</td><td>Роль. </td></tr>
+    <tr><td class="paramname">taxId</td><td>Налоговый номер. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a8311972d15e03ef787f2b244a413fb8c" name="a8311972d15e03ef787f2b244a413fb8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8311972d15e03ef787f2b244a413fb8c">&#9670;&#160;</a></span>calculateSalary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Accountant::calculateSalary </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_employee.html">Employee</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>emp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Начисляет зарплату сотруднику. </p>
+<p>Печатает сообщение с суммой зарплаты сотрудника; в данных ничего не меняет. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">emp</td><td>Сотрудник. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8dd2f8fc4175e8e27d02c89e59a45cca" name="a8dd2f8fc4175e8e27d02c89e59a45cca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd2f8fc4175e8e27d02c89e59a45cca">&#9670;&#160;</a></span>work()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Accountant::work </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Работа бухгалтера: печатает сообщение о начислении зарплаты. </p>
+
+<p>Переопределяет метод предка <a class="el" href="class_employee.html#aa82c9db656bbe43aa4831cb01b445e38">Employee</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="aa8c349e37ea91cef59f44cd5b0d8b2e9" name="aa8c349e37ea91cef59f44cd5b0d8b2e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8c349e37ea91cef59f44cd5b0d8b2e9">&#9670;&#160;</a></span>taxId_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Accountant::taxId_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>УНП (налоговый номер). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_accountant_8hpp_source.html">Accountant.hpp</a> строка <a class="el" href="_accountant_8hpp_source.html#l00015">15</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>include/lab2/people/<a class="el" href="_accountant_8hpp_source.html">Accountant.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_accountant.html">Accountant</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

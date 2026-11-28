@@ -1,0 +1,498 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab2 - Книжный склад: Класс Shelf</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab2 - Книжный склад
+   </div>
+   <div id="projectbrief">Лабораторная работа №2: классы предметной области и консольное меню</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_shelf.html','','class_shelf-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс Shelf</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Полка, на которой стоит ограниченное число коробок.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_shelf_8hpp_source.html">Shelf.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a3077cfd3d98050c3861cc75024717b90" id="r_a3077cfd3d98050c3861cc75024717b90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3077cfd3d98050c3861cc75024717b90">Shelf</a> (int id, int maxBoxes)</td></tr>
+<tr class="memdesc:a3077cfd3d98050c3861cc75024717b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт пустую полку.  <br /></td></tr>
+<tr class="memitem:ac0e2fcb3cea032205887daeb493aebd9" id="r_ac0e2fcb3cea032205887daeb493aebd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0e2fcb3cea032205887daeb493aebd9">addBox</a> (<a class="el" href="class_box.html">Box</a> box)</td></tr>
+<tr class="memdesc:ac0e2fcb3cea032205887daeb493aebd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ставит готовую коробку на полку.  <br /></td></tr>
+<tr class="memitem:ab68ccb3ee4adee5c9e9bd4fb6dc6a024" id="r_ab68ccb3ee4adee5c9e9bd4fb6dc6a024"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab68ccb3ee4adee5c9e9bd4fb6dc6a024">getBoxCount</a> () const</td></tr>
+<tr class="memdesc:ab68ccb3ee4adee5c9e9bd4fb6dc6a024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Количество коробок.  <br /></td></tr>
+<tr class="memitem:a8d4e28df45c3aaaa81d89b1a2a89b07c" id="r_a8d4e28df45c3aaaa81d89b1a2a89b07c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d4e28df45c3aaaa81d89b1a2a89b07c">getId</a> () const</td></tr>
+<tr class="memdesc:a8d4e28df45c3aaaa81d89b1a2a89b07c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Номер полки.  <br /></td></tr>
+<tr class="memitem:ae4d390eeadebb6deefe403cbd1a3f145" id="r_ae4d390eeadebb6deefe403cbd1a3f145"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4d390eeadebb6deefe403cbd1a3f145">getMaxBoxes</a> () const</td></tr>
+<tr class="memdesc:ae4d390eeadebb6deefe403cbd1a3f145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вместимость полки.  <br /></td></tr>
+<tr class="memitem:adc16a326f9fd09218bff85cb942dc555" id="r_adc16a326f9fd09218bff85cb942dc555"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_box.html">Box</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc16a326f9fd09218bff85cb942dc555">getBoxes</a> () const</td></tr>
+<tr class="memdesc:adc16a326f9fd09218bff85cb942dc555"><td class="mdescLeft">&#160;</td><td class="mdescRight">Коробки полки.  <br /></td></tr>
+<tr class="memitem:a78adc6a33f8ca03560ebf12e14df0d1f" id="r_a78adc6a33f8ca03560ebf12e14df0d1f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78adc6a33f8ca03560ebf12e14df0d1f">storeBook</a> (double weight, const std::string &amp;title, int &amp;nextBoxId)</td></tr>
+<tr class="memdesc:a78adc6a33f8ca03560ebf12e14df0d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Кладёт книгу в подходящую коробку или заводит новую.  <br /></td></tr>
+<tr class="memitem:a438302f65e5ce9fb6d7ed1fd9a28a6f3" id="r_a438302f65e5ce9fb6d7ed1fd9a28a6f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a438302f65e5ce9fb6d7ed1fd9a28a6f3">removeBook</a> (const std::string &amp;title)</td></tr>
+<tr class="memdesc:a438302f65e5ce9fb6d7ed1fd9a28a6f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Снимает одну книгу с полки.  <br /></td></tr>
+<tr class="memitem:ad8ff51b073f23c03e90cf46d6a019855" id="r_ad8ff51b073f23c03e90cf46d6a019855"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8ff51b073f23c03e90cf46d6a019855">countBook</a> (const std::string &amp;title) const</td></tr>
+<tr class="memdesc:ad8ff51b073f23c03e90cf46d6a019855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Считает экземпляры книги на полке.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Статические открытые данные</h2></td></tr>
+<tr class="memitem:a072a7f0d88f94a84237465e67fb7ad9f" id="r_a072a7f0d88f94a84237465e67fb7ad9f"><td class="memItemLeft" align="right" valign="top">static constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a072a7f0d88f94a84237465e67fb7ad9f">DEFAULT_BOX_WEIGHT</a> = 20.0</td></tr>
+<tr class="memdesc:a072a7f0d88f94a84237465e67fb7ad9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Максимальный вес новой коробки, создаваемой при раскладке книг (кг).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a97a85e0eccf44a88d1c142951349f1e0" id="r_a97a85e0eccf44a88d1c142951349f1e0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97a85e0eccf44a88d1c142951349f1e0">id_</a></td></tr>
+<tr class="memdesc:a97a85e0eccf44a88d1c142951349f1e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Номер полки.  <br /></td></tr>
+<tr class="memitem:aa2b3e3747bcd6163d4a050ebb4c9b026" id="r_aa2b3e3747bcd6163d4a050ebb4c9b026"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2b3e3747bcd6163d4a050ebb4c9b026">maxBoxes_</a></td></tr>
+<tr class="memdesc:aa2b3e3747bcd6163d4a050ebb4c9b026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Максимум коробок.  <br /></td></tr>
+<tr class="memitem:ad138afd65c0091fb665c23929ca79fd3" id="r_ad138afd65c0091fb665c23929ca79fd3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_box.html">Box</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad138afd65c0091fb665c23929ca79fd3">boxes_</a></td></tr>
+<tr class="memdesc:ad138afd65c0091fb665c23929ca79fd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Коробки на полке.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Полка, на которой стоит ограниченное число коробок. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_shelf_8hpp_source.html">Shelf.hpp</a> строка <a class="el" href="_shelf_8hpp_source.html#l00013">13</a></p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a3077cfd3d98050c3861cc75024717b90" name="a3077cfd3d98050c3861cc75024717b90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3077cfd3d98050c3861cc75024717b90">&#9670;&#160;</a></span>Shelf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Shelf::Shelf </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>maxBoxes</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создаёт пустую полку. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Номер полки. </td></tr>
+    <tr><td class="paramname">maxBoxes</td><td>Максимум коробок. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="ac0e2fcb3cea032205887daeb493aebd9" name="ac0e2fcb3cea032205887daeb493aebd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0e2fcb3cea032205887daeb493aebd9">&#9670;&#160;</a></span>addBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shelf::addBox </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_box.html">Box</a></td>          <td class="paramname"><span class="paramname"><em>box</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ставит готовую коробку на полку. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">box</td><td>Коробка. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_capacity_exceeded_exception.html" title="Превышена вместимость (полки, секции или склада).">CapacityExceededException</a></td><td>Если полка заполнена. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad8ff51b073f23c03e90cf46d6a019855" name="ad8ff51b073f23c03e90cf46d6a019855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8ff51b073f23c03e90cf46d6a019855">&#9670;&#160;</a></span>countBook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Shelf::countBook </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Считает экземпляры книги на полке. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>Название. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Количество. </dd></dl>
+
+</div>
+</div>
+<a id="ab68ccb3ee4adee5c9e9bd4fb6dc6a024" name="ab68ccb3ee4adee5c9e9bd4fb6dc6a024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab68ccb3ee4adee5c9e9bd4fb6dc6a024">&#9670;&#160;</a></span>getBoxCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Shelf::getBoxCount </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Количество коробок. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Число коробок на полке. </dd></dl>
+
+</div>
+</div>
+<a id="adc16a326f9fd09218bff85cb942dc555" name="adc16a326f9fd09218bff85cb942dc555"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc16a326f9fd09218bff85cb942dc555">&#9670;&#160;</a></span>getBoxes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="class_box.html">Box</a> &gt; Shelf::getBoxes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Коробки полки. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Копия списка коробок. </dd></dl>
+
+</div>
+</div>
+<a id="a8d4e28df45c3aaaa81d89b1a2a89b07c" name="a8d4e28df45c3aaaa81d89b1a2a89b07c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d4e28df45c3aaaa81d89b1a2a89b07c">&#9670;&#160;</a></span>getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Shelf::getId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Номер полки. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Идентификатор. </dd></dl>
+
+</div>
+</div>
+<a id="ae4d390eeadebb6deefe403cbd1a3f145" name="ae4d390eeadebb6deefe403cbd1a3f145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4d390eeadebb6deefe403cbd1a3f145">&#9670;&#160;</a></span>getMaxBoxes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Shelf::getMaxBoxes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вместимость полки. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Максимум коробок. </dd></dl>
+
+</div>
+</div>
+<a id="a438302f65e5ce9fb6d7ed1fd9a28a6f3" name="a438302f65e5ce9fb6d7ed1fd9a28a6f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a438302f65e5ce9fb6d7ed1fd9a28a6f3">&#9670;&#160;</a></span>removeBook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Shelf::removeBook </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Снимает одну книгу с полки. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>Название. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если книга найдена. </dd></dl>
+
+</div>
+</div>
+<a id="a78adc6a33f8ca03560ebf12e14df0d1f" name="a78adc6a33f8ca03560ebf12e14df0d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78adc6a33f8ca03560ebf12e14df0d1f">&#9670;&#160;</a></span>storeBook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Shelf::storeBook </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>weight</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>nextBoxId</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Кладёт книгу в подходящую коробку или заводит новую. </p>
+<p>Новая коробка создаётся, только если на полке есть место; её вес — DEFAULT_BOX_WEIGHT. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">weight</td><td>Вес книги, кг. </td></tr>
+    <tr><td class="paramname">title</td><td>Название. </td></tr>
+    <tr><td class="paramname">nextBoxId</td><td>Номер для новой коробки; увеличивается только при её создании. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если книга размещена. </dd></dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="ad138afd65c0091fb665c23929ca79fd3" name="ad138afd65c0091fb665c23929ca79fd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad138afd65c0091fb665c23929ca79fd3">&#9670;&#160;</a></span>boxes_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_box.html">Box</a>&gt; Shelf::boxes_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Коробки на полке. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_shelf_8hpp_source.html">Shelf.hpp</a> строка <a class="el" href="_shelf_8hpp_source.html#l00018">18</a></p>
+
+</div>
+</div>
+<a id="a072a7f0d88f94a84237465e67fb7ad9f" name="a072a7f0d88f94a84237465e67fb7ad9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a072a7f0d88f94a84237465e67fb7ad9f">&#9670;&#160;</a></span>DEFAULT_BOX_WEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Shelf::DEFAULT_BOX_WEIGHT = 20.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Максимальный вес новой коробки, создаваемой при раскладке книг (кг). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_shelf_8hpp_source.html">Shelf.hpp</a> строка <a class="el" href="_shelf_8hpp_source.html#l00025">25</a></p>
+
+</div>
+</div>
+<a id="a97a85e0eccf44a88d1c142951349f1e0" name="a97a85e0eccf44a88d1c142951349f1e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97a85e0eccf44a88d1c142951349f1e0">&#9670;&#160;</a></span>id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Shelf::id_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Номер полки. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_shelf_8hpp_source.html">Shelf.hpp</a> строка <a class="el" href="_shelf_8hpp_source.html#l00016">16</a></p>
+
+</div>
+</div>
+<a id="aa2b3e3747bcd6163d4a050ebb4c9b026" name="aa2b3e3747bcd6163d4a050ebb4c9b026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2b3e3747bcd6163d4a050ebb4c9b026">&#9670;&#160;</a></span>maxBoxes_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Shelf::maxBoxes_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Максимум коробок. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_shelf_8hpp_source.html">Shelf.hpp</a> строка <a class="el" href="_shelf_8hpp_source.html#l00017">17</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>include/lab2/warehouse/<a class="el" href="_shelf_8hpp_source.html">Shelf.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_shelf.html">Shelf</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

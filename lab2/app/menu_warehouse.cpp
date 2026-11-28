@@ -12,7 +12,7 @@ void Menu::runWarehouseMenu()
     int choice;
     do
     {
-        std::cout << "\n=== Управление складом ===\n"
+        std::cout << "\n= Управление складом =\n"
                      "1. Структура склада\n"
                      "2. Инвентаризация\n"
                      "3. Оборудование\n"
@@ -39,7 +39,7 @@ void Menu::runWarehouseMenu()
 
 void Menu::showWarehouseStructure() const
 {
-    std::cout << "\n--- Структура склада ---\n";
+    std::cout << "\n- Структура склада -\n";
     warehouse_.printFullStructure();
 }
 
@@ -86,7 +86,7 @@ void Menu::manageEquipment()
         for (size_t i = 0; i < equipment_.size(); ++i)
             std::cout << i + 1 << ". " << ui::pad(equipment_[i].getName(), 20)
                       << (equipment_[i].checkStatus() ? "работает" : "СЛОМАНО") << "\n";
-        std::cout << "Выберите оборудование для ремонта (0 - назад): ";
+        std::cout << "\nВыберите оборудование для ремонта (0 - назад): ";
         choice = ui::readInt(0, static_cast<int>(equipment_.size()));
         if (choice == 0)
             break;
@@ -114,7 +114,7 @@ void Menu::showMetrics() const
     for (const auto &b : books_)
         reserved += reservedCopies(b.getTitle());
 
-    std::cout << "\n--- Метрики склада ---\n"
+    std::cout << "\n- Метрики склада -\n"
               << "Всего заказов оформлено: " << orders_.size() << "\n"
               << "Среднее число книг в заказе: " << metrics_.getAverageBooksPerOrder() << "\n"
               << "Заказов ждут отгрузки/оплаты: " << pending << " (зарезервировано книг: " << reserved << ")\n"

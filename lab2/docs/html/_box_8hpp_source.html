@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab2 - Книжный склад: Исходный файл include/lab2/warehouse/Box.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab2 - Книжный склад
+   </div>
+   <div id="projectbrief">Лабораторная работа №2: классы предметной области и консольное меню</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_box_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Box.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_box_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_box.html">   13</a></span><span class="keyword">class </span><a class="code hl_function" href="class_box.html#abd4120e524c67d0aac6aea66e4c985f1">Box</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_box.html#ae2033b6d60f42f799f51c371b6a94370">   16</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_box.html#ae2033b6d60f42f799f51c371b6a94370">id_</a>; </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_box.html#a51deab14ca59abf51d0661e8049dd813">   17</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_box.html#a51deab14ca59abf51d0661e8049dd813">maxWeight_</a>; </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_box.html#a14db434449586a5039c813f563b23608">   18</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="class_box.html#a14db434449586a5039c813f563b23608">currentWeight_</a>; </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_box.html#a5c86e87cba6c64ae1caa7dd17ba2c088">   19</a></span>    std::vector&lt;std::string&gt; <a class="code hl_variable" href="class_box.html#a5c86e87cba6c64ae1caa7dd17ba2c088">bookTitles_</a>; </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_box.html#a763edb518a34333fe6aa35144d7f3ceb">   20</a></span>    std::vector&lt;double&gt; <a class="code hl_variable" href="class_box.html#a763edb518a34333fe6aa35144d7f3ceb">bookWeights_</a>; </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_box.html#abd4120e524c67d0aac6aea66e4c985f1">   28</a></span>    <a class="code hl_function" href="class_box.html#abd4120e524c67d0aac6aea66e4c985f1">Box</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">double</span> maxWeight);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_box.html#acadd2864195e7cabe06b7cdcbd47c586">   35</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_box.html#acadd2864195e7cabe06b7cdcbd47c586">putBook</a>(<span class="keywordtype">double</span> weight, <span class="keyword">const</span> std::string &amp;title);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_box.html#ab088507b89165929333aef77d45f7c99">   41</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_box.html#ab088507b89165929333aef77d45f7c99">removeBook</a>(<span class="keyword">const</span> std::string &amp;title);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_box.html#adef239f1aa63e00acabe463687fd1c7a">   47</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_box.html#adef239f1aa63e00acabe463687fd1c7a">countBook</a>(<span class="keyword">const</span> std::string &amp;title) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_box.html#add3258e9c7f218d4f92eb7211671c77a">   52</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_box.html#add3258e9c7f218d4f92eb7211671c77a">getId</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_box.html#a06d37e73cf5e0c5fe93b91b9ee08d0a9">   57</a></span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_box.html#a06d37e73cf5e0c5fe93b91b9ee08d0a9">getCurrentWeight</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_box.html#abf9ab27574e7ad9ee51895dcfb651f42">   62</a></span>    <span class="keywordtype">double</span> <a class="code hl_function" href="class_box.html#abf9ab27574e7ad9ee51895dcfb651f42">getMaxWeight</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_box.html#ac13fd5e15ab1436c47d3aa69d15806b2">   67</a></span>    std::vector&lt;std::string&gt; <a class="code hl_function" href="class_box.html#ac13fd5e15ab1436c47d3aa69d15806b2">getContents</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>};</div>
+</div>
+<div class="ttc" id="aclass_box_html_a06d37e73cf5e0c5fe93b91b9ee08d0a9"><div class="ttname"><a href="class_box.html#a06d37e73cf5e0c5fe93b91b9ee08d0a9">Box::getCurrentWeight</a></div><div class="ttdeci">double getCurrentWeight() const</div><div class="ttdoc">Текущий вес.</div></div>
+<div class="ttc" id="aclass_box_html_a14db434449586a5039c813f563b23608"><div class="ttname"><a href="class_box.html#a14db434449586a5039c813f563b23608">Box::currentWeight_</a></div><div class="ttdeci">double currentWeight_</div><div class="ttdoc">Текущий вес содержимого, кг.</div><div class="ttdef"><b>Определения</b> <a href="#l00018">Box.hpp:18</a></div></div>
+<div class="ttc" id="aclass_box_html_a51deab14ca59abf51d0661e8049dd813"><div class="ttname"><a href="class_box.html#a51deab14ca59abf51d0661e8049dd813">Box::maxWeight_</a></div><div class="ttdeci">double maxWeight_</div><div class="ttdoc">Максимально допустимый вес, кг.</div><div class="ttdef"><b>Определения</b> <a href="#l00017">Box.hpp:17</a></div></div>
+<div class="ttc" id="aclass_box_html_a5c86e87cba6c64ae1caa7dd17ba2c088"><div class="ttname"><a href="class_box.html#a5c86e87cba6c64ae1caa7dd17ba2c088">Box::bookTitles_</a></div><div class="ttdeci">std::vector&lt; std::string &gt; bookTitles_</div><div class="ttdoc">Названия книг в коробке.</div><div class="ttdef"><b>Определения</b> <a href="#l00019">Box.hpp:19</a></div></div>
+<div class="ttc" id="aclass_box_html_a763edb518a34333fe6aa35144d7f3ceb"><div class="ttname"><a href="class_box.html#a763edb518a34333fe6aa35144d7f3ceb">Box::bookWeights_</a></div><div class="ttdeci">std::vector&lt; double &gt; bookWeights_</div><div class="ttdoc">Вес каждой книги (параллельно bookTitles_), кг.</div><div class="ttdef"><b>Определения</b> <a href="#l00020">Box.hpp:20</a></div></div>
+<div class="ttc" id="aclass_box_html_ab088507b89165929333aef77d45f7c99"><div class="ttname"><a href="class_box.html#ab088507b89165929333aef77d45f7c99">Box::removeBook</a></div><div class="ttdeci">bool removeBook(const std::string &amp;title)</div><div class="ttdoc">Достаёт одну книгу с указанным названием.</div></div>
+<div class="ttc" id="aclass_box_html_abd4120e524c67d0aac6aea66e4c985f1"><div class="ttname"><a href="class_box.html#abd4120e524c67d0aac6aea66e4c985f1">Box::Box</a></div><div class="ttdeci">Box(int id, double maxWeight)</div><div class="ttdoc">Создаёт пустую коробку.</div></div>
+<div class="ttc" id="aclass_box_html_abf9ab27574e7ad9ee51895dcfb651f42"><div class="ttname"><a href="class_box.html#abf9ab27574e7ad9ee51895dcfb651f42">Box::getMaxWeight</a></div><div class="ttdeci">double getMaxWeight() const</div><div class="ttdoc">Предельный вес.</div></div>
+<div class="ttc" id="aclass_box_html_ac13fd5e15ab1436c47d3aa69d15806b2"><div class="ttname"><a href="class_box.html#ac13fd5e15ab1436c47d3aa69d15806b2">Box::getContents</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getContents() const</div><div class="ttdoc">Содержимое коробки.</div></div>
+<div class="ttc" id="aclass_box_html_acadd2864195e7cabe06b7cdcbd47c586"><div class="ttname"><a href="class_box.html#acadd2864195e7cabe06b7cdcbd47c586">Box::putBook</a></div><div class="ttdeci">bool putBook(double weight, const std::string &amp;title)</div><div class="ttdoc">Кладёт книгу в коробку.</div></div>
+<div class="ttc" id="aclass_box_html_add3258e9c7f218d4f92eb7211671c77a"><div class="ttname"><a href="class_box.html#add3258e9c7f218d4f92eb7211671c77a">Box::getId</a></div><div class="ttdeci">int getId() const</div><div class="ttdoc">Номер коробки.</div></div>
+<div class="ttc" id="aclass_box_html_adef239f1aa63e00acabe463687fd1c7a"><div class="ttname"><a href="class_box.html#adef239f1aa63e00acabe463687fd1c7a">Box::countBook</a></div><div class="ttdeci">int countBook(const std::string &amp;title) const</div><div class="ttdoc">Считает экземпляры книги в коробке.</div></div>
+<div class="ttc" id="aclass_box_html_ae2033b6d60f42f799f51c371b6a94370"><div class="ttname"><a href="class_box.html#ae2033b6d60f42f799f51c371b6a94370">Box::id_</a></div><div class="ttdeci">int id_</div><div class="ttdoc">Номер коробки.</div><div class="ttdef"><b>Определения</b> <a href="#l00016">Box.hpp:16</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_891b15cd915228d690ff1b982c095043.html">lab2</a></li><li class="navelem"><a href="dir_b4387ab3d5d0c364f2341a108c6d0dc1.html">warehouse</a></li><li class="navelem"><a href="_box_8hpp.html">Box.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

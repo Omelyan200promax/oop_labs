@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['accessdeniedexception_0',['AccessDeniedException',['../class_access_denied_exception.html#ad84fa1512865d573ad5e872c12c01d16',1,'AccessDeniedException']]],
+  ['accountant_1',['Accountant',['../class_accountant.html#aa638b8d37bac319edea097c9f72933b1',1,'Accountant']]],
+  ['addbook_2',['addBook',['../class_order.html#a22c2215d1cbb7ef0344fa7f5abf6e8a0',1,'Order']]],
+  ['addbooks_3',['addBooks',['../class_warehouse_metrics.html#a3e54f7bc5c674eda7fa2fcc6ceb53863',1,'WarehouseMetrics']]],
+  ['addbox_4',['addBox',['../class_pallet.html#ac6e77c0fc3bf7706e59a8468fcc60df5',1,'Pallet::addBox()'],['../class_shelf.html#ac0e2fcb3cea032205887daeb493aebd9',1,'Shelf::addBox()']]],
+  ['addnotification_5',['addNotification',['../class_customer.html#ad14bb2a373e275831978d15f7f5686a3',1,'Customer']]],
+  ['addorder_6',['addOrder',['../class_warehouse_metrics.html#a8317d77062f3dae3e72927a63e0b6cf5',1,'WarehouseMetrics']]],
+  ['addorderid_7',['addOrderId',['../class_customer.html#a5a3ba53c5e0b161e6e109f4e2a158ef9',1,'Customer']]],
+  ['addrack_8',['addRack',['../class_section.html#a104a21d10e49c3c0896c2755b9f1563f',1,'Section']]],
+  ['addrating_9',['addRating',['../class_book.html#aac969499275f70372407292bf3fff943',1,'Book']]],
+  ['addrecord_10',['addRecord',['../class_audit_log.html#a79535f023fac1fca2e582e53afae5056',1,'AuditLog']]],
+  ['address_11',['Address',['../class_address.html#a51c3a2e6457449524566aeff7f3a9b61',1,'Address']]],
+  ['addreview_12',['addReview',['../class_book.html#a63b52ec88a317513d13810688fb9a5ed',1,'Book']]],
+  ['addscore_13',['addScore',['../class_rating.html#a26476fcf442b903480708b7fdfea430b',1,'Rating']]],
+  ['addsection_14',['addSection',['../class_warehouse.html#afde8c3890f615c45ef4c4d2260a0680b',1,'Warehouse']]],
+  ['addshelf_15',['addShelf',['../class_rack.html#adbb9cb3c0f98e5af6de802324181b4e0',1,'Rack']]],
+  ['addstock_16',['addStock',['../class_book.html#a477230fb9503d7ee5043efa50918d3e7',1,'Book']]],
+  ['apply_17',['apply',['../class_discount.html#a14205d5e4890766b3a8559ce628619ea',1,'Discount']]],
+  ['applydiscount_18',['applyDiscount',['../class_price.html#ae8a50a240d08c53f62066b1b213fc0d9',1,'Price::applyDiscount()'],['../class_book.html#a8326ee0184066f22738221f730467026',1,'Book::applyDiscount()']]],
+  ['applydiscounttobook_19',['applyDiscountToBook',['../class_manager.html#af0f93932173add7498eea03ca1d3acf0',1,'Manager']]],
+  ['applypenalty_20',['applyPenalty',['../class_penalty.html#af11497b9d15a788f10a9b32fd50ed711',1,'Penalty']]],
+  ['approve_21',['approve',['../class_return_request.html#a1f311bcc3af67e3efe144c376f78a8c5',1,'ReturnRequest']]],
+  ['auditor_22',['Auditor',['../class_auditor.html#a63529db7a6935289d627d7c49499e4df',1,'Auditor']]],
+  ['author_23',['Author',['../class_author.html#a5ff5dbf8dc023c4dfbee9963c8232c96',1,'Author']]]
+];

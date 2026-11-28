@@ -1,0 +1,25 @@
+var class_customer =
+[
+    [ "Customer", "class_customer.html#a25c906d107a18831f618f6c13fddf878", null ],
+    [ "addNotification", "class_customer.html#ad14bb2a373e275831978d15f7f5686a3", null ],
+    [ "addOrderId", "class_customer.html#a5a3ba53c5e0b161e6e109f4e2a158ef9", null ],
+    [ "decrementActiveOrders", "class_customer.html#a86734432f92f2f207e458f71bafdab1e", null ],
+    [ "deposit", "class_customer.html#a792438c1989c6517ce8668560a86d53c", null ],
+    [ "getActiveOrdersCount", "class_customer.html#ab0af79c98d317a23ab59cc79edc9b3bd", null ],
+    [ "getAddress", "class_customer.html#a8fb8a07a2a510551ea2bf2f6f5642401", null ],
+    [ "getAddressStr", "class_customer.html#a9ab0bb58641c7a64b0d310675387709e", null ],
+    [ "getBalance", "class_customer.html#ab51e5c3e7e196ca566a978dcd121ed1f", null ],
+    [ "getEmail", "class_customer.html#a1bba6ba9b7b11c1fca1b04fb9a39aa3a", null ],
+    [ "getName", "class_customer.html#a54d175538cebde1559e82c644eba9f64", null ],
+    [ "getNotifications", "class_customer.html#a8cab23673c53fd8689bdc4c496beacab", null ],
+    [ "getOrderIds", "class_customer.html#ae1b36ea95fd5fb2788ef04d034302c7f", null ],
+    [ "incrementActiveOrders", "class_customer.html#af4766660cde2f995e8c53757ade4d7c9", null ],
+    [ "pay", "class_customer.html#a78319c6c0e1da058f03edd15ebae56e9", null ],
+    [ "activeOrdersCount_", "class_customer.html#ae3473da67ac23989fbdd36a2ec740a17", null ],
+    [ "address_", "class_customer.html#a397722ecb99d7e5d33371c751b57df43", null ],
+    [ "balance_", "class_customer.html#af685f2ef798d54da45ae884dbdd3fe8a", null ],
+    [ "contact_", "class_customer.html#a3b94ecd89506515e7a718f6e9507f6c1", null ],
+    [ "name_", "class_customer.html#ace69586378052c41e6972ffdaf05dd10", null ],
+    [ "notifications_", "class_customer.html#a7cd8e023c944cbfdc0ef67a3f8ad9858", null ],
+    [ "orderIds_", "class_customer.html#a42901d1b1c739397fe5ce97eea835b30", null ]
+];

@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab2 - Книжный склад: Исходный файл include/lab2/orders/Payment.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab2 - Книжный склад
+   </div>
+   <div id="projectbrief">Лабораторная работа №2: классы предметной области и консольное меню</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_payment_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Payment.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_payment_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_customer_8hpp.html">lab2/people/Customer.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_price_8hpp.html">lab2/common/Price.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_payment.html">   13</a></span><span class="keyword">class </span><a class="code hl_function" href="class_payment.html#af160dcd3bc250afd5cf7b47920d00cd1">Payment</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_payment.html#a27d7d79650030c6cb354e719331dccbd">   16</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_payment.html#a27d7d79650030c6cb354e719331dccbd">id_</a>; </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_payment.html#a96bc9e757fd8fe57f3b42829ecb8afab">   17</a></span>    <a class="code hl_class" href="class_customer.html">Customer</a> <a class="code hl_variable" href="class_payment.html#a96bc9e757fd8fe57f3b42829ecb8afab">customer_</a>; </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_payment.html#a95dceb85aaeef2d0c46678d9d2e852a1">   18</a></span>    <a class="code hl_class" href="class_price.html">Price</a> <a class="code hl_variable" href="class_payment.html#a95dceb85aaeef2d0c46678d9d2e852a1">amount_</a>; </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_payment.html#af3639aa8d253ae16d4a55f6bb6bcc7c1">   19</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_payment.html#af3639aa8d253ae16d4a55f6bb6bcc7c1">isSuccess_</a>; </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_payment.html#af160dcd3bc250afd5cf7b47920d00cd1">   28</a></span>    <a class="code hl_function" href="class_payment.html#af160dcd3bc250afd5cf7b47920d00cd1">Payment</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <a class="code hl_class" href="class_customer.html">Customer</a> customer, <a class="code hl_class" href="class_price.html">Price</a> amount);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_payment.html#acc882c8c41fa50cc082bea74bc405e8c">   33</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_payment.html#acc882c8c41fa50cc082bea74bc405e8c">processPayment</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_payment.html#a5fa26b093259e4765a13c99ed42dfbe0">   38</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_payment.html#a5fa26b093259e4765a13c99ed42dfbe0">getStatus</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
+</div>
+<div class="ttc" id="a_customer_8hpp_html"><div class="ttname"><a href="_customer_8hpp.html">Customer.hpp</a></div><div class="ttdoc">Класс Customer — клиент.</div></div>
+<div class="ttc" id="a_price_8hpp_html"><div class="ttname"><a href="_price_8hpp.html">Price.hpp</a></div><div class="ttdoc">Класс Price — цена с валютой.</div></div>
+<div class="ttc" id="aclass_customer_html"><div class="ttname"><a href="class_customer.html">Customer</a></div><div class="ttdoc">Клиент магазина: контакты, адрес, баланс, уведомления и номера заказов.</div><div class="ttdef"><b>Определения</b> <a href="_customer_8hpp_source.html#l00015">Customer.hpp:16</a></div></div>
+<div class="ttc" id="aclass_payment_html_a27d7d79650030c6cb354e719331dccbd"><div class="ttname"><a href="class_payment.html#a27d7d79650030c6cb354e719331dccbd">Payment::id_</a></div><div class="ttdeci">int id_</div><div class="ttdoc">Номер платежа.</div><div class="ttdef"><b>Определения</b> <a href="#l00016">Payment.hpp:16</a></div></div>
+<div class="ttc" id="aclass_payment_html_a5fa26b093259e4765a13c99ed42dfbe0"><div class="ttname"><a href="class_payment.html#a5fa26b093259e4765a13c99ed42dfbe0">Payment::getStatus</a></div><div class="ttdeci">bool getStatus() const</div><div class="ttdoc">Результат платежа.</div></div>
+<div class="ttc" id="aclass_payment_html_a95dceb85aaeef2d0c46678d9d2e852a1"><div class="ttname"><a href="class_payment.html#a95dceb85aaeef2d0c46678d9d2e852a1">Payment::amount_</a></div><div class="ttdeci">Price amount_</div><div class="ttdoc">Сумма платежа.</div><div class="ttdef"><b>Определения</b> <a href="#l00018">Payment.hpp:18</a></div></div>
+<div class="ttc" id="aclass_payment_html_a96bc9e757fd8fe57f3b42829ecb8afab"><div class="ttname"><a href="class_payment.html#a96bc9e757fd8fe57f3b42829ecb8afab">Payment::customer_</a></div><div class="ttdeci">Customer customer_</div><div class="ttdoc">Плательщик (копия).</div><div class="ttdef"><b>Определения</b> <a href="#l00017">Payment.hpp:17</a></div></div>
+<div class="ttc" id="aclass_payment_html_acc882c8c41fa50cc082bea74bc405e8c"><div class="ttname"><a href="class_payment.html#acc882c8c41fa50cc082bea74bc405e8c">Payment::processPayment</a></div><div class="ttdeci">void processPayment()</div><div class="ttdoc">Проводит платёж: списывает сумму с баланса (копии) клиента.</div></div>
+<div class="ttc" id="aclass_payment_html_af160dcd3bc250afd5cf7b47920d00cd1"><div class="ttname"><a href="class_payment.html#af160dcd3bc250afd5cf7b47920d00cd1">Payment::Payment</a></div><div class="ttdeci">Payment(int id, Customer customer, Price amount)</div><div class="ttdoc">Создаёт платёж.</div></div>
+<div class="ttc" id="aclass_payment_html_af3639aa8d253ae16d4a55f6bb6bcc7c1"><div class="ttname"><a href="class_payment.html#af3639aa8d253ae16d4a55f6bb6bcc7c1">Payment::isSuccess_</a></div><div class="ttdeci">bool isSuccess_</div><div class="ttdoc">Признак успешной оплаты.</div><div class="ttdef"><b>Определения</b> <a href="#l00019">Payment.hpp:19</a></div></div>
+<div class="ttc" id="aclass_price_html"><div class="ttname"><a href="class_price.html">Price</a></div><div class="ttdoc">Денежная сумма с указанием валюты.</div><div class="ttdef"><b>Определения</b> <a href="_price_8hpp_source.html#l00010">Price.hpp:11</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_891b15cd915228d690ff1b982c095043.html">lab2</a></li><li class="navelem"><a href="dir_45a5a6c607d3ad3e2e7fa23dc9039810.html">orders</a></li><li class="navelem"><a href="_payment_8hpp.html">Payment.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

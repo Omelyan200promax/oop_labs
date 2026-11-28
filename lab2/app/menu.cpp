@@ -162,7 +162,7 @@ void Menu::run()
     int choice;
     do
     {
-        std::cout << "\n=== Книжный склад: главное меню (" << today_.toString() << ") ===\n";
+        std::cout << "\n= Книжный склад: главное меню (" << today_.toString() << ") =\n";
         std::cout << "1. Каталог книг\n";
         std::cout << "2. Личный кабинет клиента\n";
         std::cout << "3. Кабинет сотрудника\n";
@@ -195,7 +195,7 @@ void Menu::runCatalogMenu() const
     int c;
     do
     {
-        std::cout << "\n--- Каталог ---\n"
+        std::cout << "\n- Каталог -\n"
                      "1. Все книги\n"
                      "2. Сортировать по наличию\n"
                      "3. Поиск по названию или автору\n"
@@ -301,7 +301,7 @@ void Menu::findByIsbn() const
 void Menu::showBookDetails() const
 {
     auto map = showBooks(false);
-    std::cout << "Выберите книгу (0 - отмена): ";
+    std::cout << "\nВыберите книгу (0 - отмена): ";
     int idx = ui::readInt(0, static_cast<int>(map.size()));
     if (idx == 0)
         return;

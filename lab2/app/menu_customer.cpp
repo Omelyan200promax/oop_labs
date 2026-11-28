@@ -32,7 +32,7 @@ void Menu::showCustomers() const
 void Menu::loginCustomer()
 {
     showCustomers();
-    std::cout << "Выберите клиента (0 - назад): ";
+    std::cout << "\nВыберите клиента (0 - назад): ";
     int idx = ui::readInt(0, static_cast<int>(customers_.size()));
     if (idx == 0)
         return;
@@ -51,7 +51,7 @@ void Menu::runCustomerMenu()
         int unread = static_cast<int>(std::count_if(c.getNotifications().begin(), c.getNotifications().end(),
                                                     [](const Notification &n)
                                                     { return !n.isRead(); }));
-        std::cout << "\n=== Кабинет клиента: " << c.getName() << " ===\n"
+        std::cout << "\n= Кабинет клиента: " << c.getName() << " =\n"
                   << "Баланс: " << ui::money(c.getBalance()) << " BYN | активных заказов: " << c.getActiveOrdersCount() << "\n"
                   << "1. Пополнить баланс\n"
                   << "2. Создать заказ\n"
@@ -139,7 +139,7 @@ void Menu::createOrder()
     std::cout << "\nСостав заказа:\n";
     for (size_t bi : cart)
         std::cout << "  - " << books_[bi].getTitle() << " — " << ui::money(books_[bi].getPriceAmount()) << " BYN\n";
-    std::cout << "Итого: " << ui::money(order.calculateTotal()) << " BYN\n"
+    std::cout << "Итого: " << ui::money(order.calculateTotal()) << " BYN\n\n"
               << "Оформить заказ? (1 - да, 0 - отмена): ";
     if (ui::readInt(0, 1) == 0)
     {
@@ -162,7 +162,7 @@ void Menu::createOrder()
     c.addNotification(Notification("Создан заказ №" + std::to_string(id) + " на сумму " + ui::money(invoice.getAmount()) + " BYN"));
     logAction("Клиент " + c.getName() + " создал заказ №" + std::to_string(id));
     std::cout << "Заказ №" << id << " создан. Выставлен счёт на " << ui::money(invoice.getAmount()) << " BYN.\n"
-              << "Оплатить сейчас с баланса? (1 - да, 0 - позже): ";
+              << "\nОплатить сейчас с баланса? (1 - да, 0 - позже): ";
     if (ui::readInt(0, 1) == 1)
         payOrder(orders_.back());
 }
@@ -208,7 +208,7 @@ void Menu::payOrderMenu()
     std::cout << "\nЗаказы к оплате:\n";
     for (size_t i = 0; i < mine.size(); ++i)
         std::cout << i + 1 << ". Заказ №" << mine[i]->order.getId() << " на " << ui::money(mine[i]->order.calculateTotal()) << " BYN\n";
-    std::cout << "Выберите заказ (0 - назад): ";
+    std::cout << "\nВыберите заказ (0 - назад): ";
     int n = ui::readInt(0, static_cast<int>(mine.size()));
     if (n != 0)
         payOrder(*mine[n - 1]);
@@ -229,7 +229,7 @@ void Menu::cancelOrderMenu()
     std::cout << "\nЗаказы, доступные для отмены:\n";
     for (size_t i = 0; i < mine.size(); ++i)
         std::cout << i + 1 << ". Заказ №" << mine[i]->order.getId() << " — " << ui::statusRu(mine[i]->order.getStatus()) << "\n";
-    std::cout << "Выберите заказ (0 - назад): ";
+    std::cout << "\nВыберите заказ (0 - назад): ";
     int n = ui::readInt(0, static_cast<int>(mine.size()));
     if (n == 0)
         return;
@@ -292,7 +292,7 @@ void Menu::requestReturn()
     std::cout << "\nДоставленные заказы:\n";
     for (size_t i = 0; i < mine.size(); ++i)
         std::cout << i + 1 << ". Заказ №" << mine[i]->order.getId() << " на " << ui::money(mine[i]->order.calculateTotal()) << " BYN\n";
-    std::cout << "Выберите заказ (0 - назад): ";
+    std::cout << "\nВыберите заказ (0 - назад): ";
     int n = ui::readInt(0, static_cast<int>(mine.size()));
     if (n == 0)
         return;
@@ -326,7 +326,7 @@ void Menu::leaveReview()
     std::cout << "\nКниги, которые вы получили:\n";
     for (size_t i = 0; i < titles.size(); ++i)
         std::cout << i + 1 << ". " << titles[i] << "\n";
-    std::cout << "Выберите книгу (0 - назад): ";
+    std::cout << "\nВыберите книгу (0 - назад): ";
     int n = ui::readInt(0, static_cast<int>(titles.size()));
     if (n == 0)
         return;

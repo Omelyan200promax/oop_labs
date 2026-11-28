@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab2 - Книжный склад: Класс Order</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab2 - Книжный склад
+   </div>
+   <div id="projectbrief">Лабораторная работа №2: классы предметной области и консольное меню</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_order.html','','class_order-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс Order</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Заказ клиента на одну или несколько книг.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_order_8hpp_source.html">Order.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a606e97fc0ec4855cd2ab16fbe77f79c8" id="r_a606e97fc0ec4855cd2ab16fbe77f79c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a606e97fc0ec4855cd2ab16fbe77f79c8">Order</a> (int id, <a class="el" href="class_customer.html">Customer</a> customer, <a class="el" href="class_custom_date.html">CustomDate</a> date)</td></tr>
+<tr class="memdesc:a606e97fc0ec4855cd2ab16fbe77f79c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт заказ со статусом Created и без книг.  <br /></td></tr>
+<tr class="memitem:a22c2215d1cbb7ef0344fa7f5abf6e8a0" id="r_a22c2215d1cbb7ef0344fa7f5abf6e8a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22c2215d1cbb7ef0344fa7f5abf6e8a0">addBook</a> (<a class="el" href="class_book.html">Book</a> book)</td></tr>
+<tr class="memdesc:a22c2215d1cbb7ef0344fa7f5abf6e8a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет книгу в заказ.  <br /></td></tr>
+<tr class="memitem:aeb00ef146206a1bc181ba69e4a6bda0e" id="r_aeb00ef146206a1bc181ba69e4a6bda0e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb00ef146206a1bc181ba69e4a6bda0e">calculateTotal</a> () const</td></tr>
+<tr class="memdesc:aeb00ef146206a1bc181ba69e4a6bda0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Считает стоимость заказа.  <br /></td></tr>
+<tr class="memitem:aa1fdfe3ff57d79851198527435c3b164" id="r_aa1fdfe3ff57d79851198527435c3b164"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1fdfe3ff57d79851198527435c3b164">changeStatus</a> (std::string newStatus)</td></tr>
+<tr class="memdesc:aa1fdfe3ff57d79851198527435c3b164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Меняет статус заказа.  <br /></td></tr>
+<tr class="memitem:abababdc3b90d482d807766e5fbad5100" id="r_abababdc3b90d482d807766e5fbad5100"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abababdc3b90d482d807766e5fbad5100">getStatus</a> () const</td></tr>
+<tr class="memdesc:abababdc3b90d482d807766e5fbad5100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Текущий статус.  <br /></td></tr>
+<tr class="memitem:ad4cdfb16da4ced0da764cf0163babcef" id="r_ad4cdfb16da4ced0da764cf0163babcef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_customer.html">Customer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4cdfb16da4ced0da764cf0163babcef">getCustomer</a> () const</td></tr>
+<tr class="memdesc:ad4cdfb16da4ced0da764cf0163babcef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Клиент заказа.  <br /></td></tr>
+<tr class="memitem:a29ebb96b3a6a655344f03e92fb3bb431" id="r_a29ebb96b3a6a655344f03e92fb3bb431"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29ebb96b3a6a655344f03e92fb3bb431">getFirstBookTitle</a> () const</td></tr>
+<tr class="memdesc:a29ebb96b3a6a655344f03e92fb3bb431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Название первой книги.  <br /></td></tr>
+<tr class="memitem:a9506e43ee697e335b3e0e3ad04f4d8fa" id="r_a9506e43ee697e335b3e0e3ad04f4d8fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9506e43ee697e335b3e0e3ad04f4d8fa">getId</a> () const</td></tr>
+<tr class="memdesc:a9506e43ee697e335b3e0e3ad04f4d8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Номер заказа.  <br /></td></tr>
+<tr class="memitem:a2d39e17da76f18039cfcf747193074c0" id="r_a2d39e17da76f18039cfcf747193074c0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d39e17da76f18039cfcf747193074c0">getBookTitles</a> () const</td></tr>
+<tr class="memdesc:a2d39e17da76f18039cfcf747193074c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Названия книг заказа.  <br /></td></tr>
+<tr class="memitem:ad479a88894fe546db6c585b4e8afa30e" id="r_ad479a88894fe546db6c585b4e8afa30e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_custom_date.html">CustomDate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad479a88894fe546db6c585b4e8afa30e">getDate</a> () const</td></tr>
+<tr class="memdesc:ad479a88894fe546db6c585b4e8afa30e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Дата оформления.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a089f99bb693c3990e2f1d6c1c3bb311b" id="r_a089f99bb693c3990e2f1d6c1c3bb311b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a089f99bb693c3990e2f1d6c1c3bb311b">id_</a></td></tr>
+<tr class="memdesc:a089f99bb693c3990e2f1d6c1c3bb311b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Номер заказа.  <br /></td></tr>
+<tr class="memitem:aee39a40b2dd1cc7af8f66b76118bd85a" id="r_aee39a40b2dd1cc7af8f66b76118bd85a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_customer.html">Customer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee39a40b2dd1cc7af8f66b76118bd85a">customer_</a></td></tr>
+<tr class="memdesc:aee39a40b2dd1cc7af8f66b76118bd85a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Клиент (копия).  <br /></td></tr>
+<tr class="memitem:ac8dc95666429ad58c97f51e0ee428038" id="r_ac8dc95666429ad58c97f51e0ee428038"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_book.html">Book</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8dc95666429ad58c97f51e0ee428038">books_</a></td></tr>
+<tr class="memdesc:ac8dc95666429ad58c97f51e0ee428038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Книги в заказе.  <br /></td></tr>
+<tr class="memitem:a1d995f9d69d21392a161c3a169a84f7f" id="r_a1d995f9d69d21392a161c3a169a84f7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_custom_date.html">CustomDate</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d995f9d69d21392a161c3a169a84f7f">orderDate_</a></td></tr>
+<tr class="memdesc:a1d995f9d69d21392a161c3a169a84f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Дата оформления.  <br /></td></tr>
+<tr class="memitem:a316254aaad5619dea85a4d6e2aedc2a2" id="r_a316254aaad5619dea85a4d6e2aedc2a2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a316254aaad5619dea85a4d6e2aedc2a2">status_</a></td></tr>
+<tr class="memdesc:a316254aaad5619dea85a4d6e2aedc2a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Текущий статус.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Заказ клиента на одну или несколько книг. </p>
+<p>Статус хранится строкой: Created (создан), Paid (оплачен), Shipped (отгружен), In <a class="el" href="class_delivery.html" title="Доставка заказа курьером по адресу клиента.">Delivery</a> (в доставке), Delivered (доставлен), Cancelled (отменён), Returned (возвращён). Новый заказ получает статус Created. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_order_8hpp_source.html">Order.hpp</a> строка <a class="el" href="_order_8hpp_source.html#l00016">16</a></p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a606e97fc0ec4855cd2ab16fbe77f79c8" name="a606e97fc0ec4855cd2ab16fbe77f79c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a606e97fc0ec4855cd2ab16fbe77f79c8">&#9670;&#160;</a></span>Order()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Order::Order </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_customer.html">Customer</a></td>          <td class="paramname"><span class="paramname"><em>customer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_custom_date.html">CustomDate</a></td>          <td class="paramname"><span class="paramname"><em>date</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создаёт заказ со статусом Created и без книг. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Номер заказа. </td></tr>
+    <tr><td class="paramname">customer</td><td>Клиент. </td></tr>
+    <tr><td class="paramname">date</td><td>Дата оформления. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="a22c2215d1cbb7ef0344fa7f5abf6e8a0" name="a22c2215d1cbb7ef0344fa7f5abf6e8a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22c2215d1cbb7ef0344fa7f5abf6e8a0">&#9670;&#160;</a></span>addBook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Order::addBook </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_book.html">Book</a></td>          <td class="paramname"><span class="paramname"><em>book</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет книгу в заказ. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">book</td><td>Книга. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeb00ef146206a1bc181ba69e4a6bda0e" name="aeb00ef146206a1bc181ba69e4a6bda0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb00ef146206a1bc181ba69e4a6bda0e">&#9670;&#160;</a></span>calculateTotal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Order::calculateTotal </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Считает стоимость заказа. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Сумма цен всех книг. </dd></dl>
+
+</div>
+</div>
+<a id="aa1fdfe3ff57d79851198527435c3b164" name="aa1fdfe3ff57d79851198527435c3b164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1fdfe3ff57d79851198527435c3b164">&#9670;&#160;</a></span>changeStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Order::changeStatus </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>newStatus</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Меняет статус заказа. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newStatus</td><td>Новый статус. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_invalid_order_exception.html" title="Некорректное состояние заказа или запроса (например, возврат не одобрен).">InvalidOrderException</a></td><td>Если пытаются перевести пустой заказ в статус Paid. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2d39e17da76f18039cfcf747193074c0" name="a2d39e17da76f18039cfcf747193074c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d39e17da76f18039cfcf747193074c0">&#9670;&#160;</a></span>getBookTitles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; Order::getBookTitles </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Названия книг заказа. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Названия по одному на экземпляр. </dd></dl>
+
+</div>
+</div>
+<a id="ad4cdfb16da4ced0da764cf0163babcef" name="ad4cdfb16da4ced0da764cf0163babcef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4cdfb16da4ced0da764cf0163babcef">&#9670;&#160;</a></span>getCustomer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_customer.html">Customer</a> Order::getCustomer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Клиент заказа. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Копия клиента. </dd></dl>
+
+</div>
+</div>
+<a id="ad479a88894fe546db6c585b4e8afa30e" name="ad479a88894fe546db6c585b4e8afa30e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad479a88894fe546db6c585b4e8afa30e">&#9670;&#160;</a></span>getDate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_custom_date.html">CustomDate</a> Order::getDate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дата оформления. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Дата. </dd></dl>
+
+</div>
+</div>
+<a id="a29ebb96b3a6a655344f03e92fb3bb431" name="a29ebb96b3a6a655344f03e92fb3bb431"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29ebb96b3a6a655344f03e92fb3bb431">&#9670;&#160;</a></span>getFirstBookTitle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Order::getFirstBookTitle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Название первой книги. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Название или «Пусто», если книг нет. </dd></dl>
+
+</div>
+</div>
+<a id="a9506e43ee697e335b3e0e3ad04f4d8fa" name="a9506e43ee697e335b3e0e3ad04f4d8fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9506e43ee697e335b3e0e3ad04f4d8fa">&#9670;&#160;</a></span>getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Order::getId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Номер заказа. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Идентификатор. </dd></dl>
+
+</div>
+</div>
+<a id="abababdc3b90d482d807766e5fbad5100" name="abababdc3b90d482d807766e5fbad5100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abababdc3b90d482d807766e5fbad5100">&#9670;&#160;</a></span>getStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Order::getStatus </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Текущий статус. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка статуса. </dd></dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="ac8dc95666429ad58c97f51e0ee428038" name="ac8dc95666429ad58c97f51e0ee428038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8dc95666429ad58c97f51e0ee428038">&#9670;&#160;</a></span>books_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_book.html">Book</a>&gt; Order::books_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Книги в заказе. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_order_8hpp_source.html">Order.hpp</a> строка <a class="el" href="_order_8hpp_source.html#l00021">21</a></p>
+
+</div>
+</div>
+<a id="aee39a40b2dd1cc7af8f66b76118bd85a" name="aee39a40b2dd1cc7af8f66b76118bd85a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee39a40b2dd1cc7af8f66b76118bd85a">&#9670;&#160;</a></span>customer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_customer.html">Customer</a> Order::customer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Клиент (копия). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_order_8hpp_source.html">Order.hpp</a> строка <a class="el" href="_order_8hpp_source.html#l00020">20</a></p>
+
+</div>
+</div>
+<a id="a089f99bb693c3990e2f1d6c1c3bb311b" name="a089f99bb693c3990e2f1d6c1c3bb311b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a089f99bb693c3990e2f1d6c1c3bb311b">&#9670;&#160;</a></span>id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Order::id_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Номер заказа. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_order_8hpp_source.html">Order.hpp</a> строка <a class="el" href="_order_8hpp_source.html#l00019">19</a></p>
+
+</div>
+</div>
+<a id="a1d995f9d69d21392a161c3a169a84f7f" name="a1d995f9d69d21392a161c3a169a84f7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d995f9d69d21392a161c3a169a84f7f">&#9670;&#160;</a></span>orderDate_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_custom_date.html">CustomDate</a> Order::orderDate_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Дата оформления. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_order_8hpp_source.html">Order.hpp</a> строка <a class="el" href="_order_8hpp_source.html#l00022">22</a></p>
+
+</div>
+</div>
+<a id="a316254aaad5619dea85a4d6e2aedc2a2" name="a316254aaad5619dea85a4d6e2aedc2a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a316254aaad5619dea85a4d6e2aedc2a2">&#9670;&#160;</a></span>status_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Order::status_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Текущий статус. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_order_8hpp_source.html">Order.hpp</a> строка <a class="el" href="_order_8hpp_source.html#l00023">23</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>include/lab2/orders/<a class="el" href="_order_8hpp_source.html">Order.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_order.html">Order</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

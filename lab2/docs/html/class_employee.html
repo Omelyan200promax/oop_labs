@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab2 - Книжный склад: Класс Employee</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab2 - Книжный склад
+   </div>
+   <div id="projectbrief">Лабораторная работа №2: классы предметной области и консольное меню</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_employee.html','','class_employee-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс Employee</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Сотрудник склада — базовый класс иерархии сотрудников.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_employee_8hpp_source.html">Employee.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:Employee:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_employee.png" usemap="#Employee_map" alt=""/>
+  <map id="Employee_map" name="Employee_map">
+<area href="class_accountant.html" title="Бухгалтер." alt="Accountant" shape="rect" coords="0,56,81,80"/>
+<area href="class_auditor.html" title="Аудитор склада." alt="Auditor" shape="rect" coords="91,56,172,80"/>
+<area href="class_courier.html" title="Курьер." alt="Courier" shape="rect" coords="182,56,263,80"/>
+<area href="class_editor.html" title="Редактор каталога." alt="Editor" shape="rect" coords="273,56,354,80"/>
+<area href="class_manager.html" title="Менеджер отдела продаж." alt="Manager" shape="rect" coords="364,56,445,80"/>
+<area href="class_storekeeper.html" title="Кладовщик." alt="Storekeeper" shape="rect" coords="455,56,536,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a6146899a27321ab9b183ec44502cf2bc" id="r_a6146899a27321ab9b183ec44502cf2bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6146899a27321ab9b183ec44502cf2bc">Employee</a> (std::string name, int id, double salary, <a class="el" href="class_role.html">Role</a> role)</td></tr>
+<tr class="memdesc:a6146899a27321ab9b183ec44502cf2bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт сотрудника.  <br /></td></tr>
+<tr class="memitem:ad78934ca7e3f6c151e6a4f8209f19aaf" id="r_ad78934ca7e3f6c151e6a4f8209f19aaf"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad78934ca7e3f6c151e6a4f8209f19aaf">getName</a> () const</td></tr>
+<tr class="memdesc:ad78934ca7e3f6c151e6a4f8209f19aaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">ФИО сотрудника.  <br /></td></tr>
+<tr class="memitem:a046fa9b5f8785c8c97dcb38ee7e801f9" id="r_a046fa9b5f8785c8c97dcb38ee7e801f9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a046fa9b5f8785c8c97dcb38ee7e801f9">getSalary</a> () const</td></tr>
+<tr class="memdesc:a046fa9b5f8785c8c97dcb38ee7e801f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зарплата.  <br /></td></tr>
+<tr class="memitem:ac09c991d2a57bfc7ce996ba181d355b9" id="r_ac09c991d2a57bfc7ce996ba181d355b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_role.html">Role</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac09c991d2a57bfc7ce996ba181d355b9">getRole</a> () const</td></tr>
+<tr class="memdesc:ac09c991d2a57bfc7ce996ba181d355b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Роль сотрудника.  <br /></td></tr>
+<tr class="memitem:aa82c9db656bbe43aa4831cb01b445e38" id="r_aa82c9db656bbe43aa4831cb01b445e38"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa82c9db656bbe43aa4831cb01b445e38">work</a> ()</td></tr>
+<tr class="memdesc:aa82c9db656bbe43aa4831cb01b445e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполняет обычную работу сотрудника.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a61cad87d1bfb96467a355a278bbf5f24" id="r_a61cad87d1bfb96467a355a278bbf5f24"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61cad87d1bfb96467a355a278bbf5f24">name_</a></td></tr>
+<tr class="memdesc:a61cad87d1bfb96467a355a278bbf5f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">ФИО.  <br /></td></tr>
+<tr class="memitem:a83fa5faaa851e55183193f2a9e411513" id="r_a83fa5faaa851e55183193f2a9e411513"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83fa5faaa851e55183193f2a9e411513">id_</a></td></tr>
+<tr class="memdesc:a83fa5faaa851e55183193f2a9e411513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Табельный номер.  <br /></td></tr>
+<tr class="memitem:a774298a56028e3958d64c97dea41111c" id="r_a774298a56028e3958d64c97dea41111c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a774298a56028e3958d64c97dea41111c">salary_</a></td></tr>
+<tr class="memdesc:a774298a56028e3958d64c97dea41111c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зарплата, BYN.  <br /></td></tr>
+<tr class="memitem:ad6a647bede5a0a28b561af1a5d80ac4b" id="r_ad6a647bede5a0a28b561af1a5d80ac4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_role.html">Role</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6a647bede5a0a28b561af1a5d80ac4b">role_</a></td></tr>
+<tr class="memdesc:ad6a647bede5a0a28b561af1a5d80ac4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Роль (должность и уровень доступа).  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Сотрудник склада — базовый класс иерархии сотрудников. </p>
+<p>Производные классы (<a class="el" href="class_manager.html" title="Менеджер отдела продаж.">Manager</a>, <a class="el" href="class_storekeeper.html" title="Кладовщик.">Storekeeper</a>, <a class="el" href="class_courier.html" title="Курьер.">Courier</a>, <a class="el" href="class_auditor.html" title="Аудитор склада.">Auditor</a>, <a class="el" href="class_accountant.html" title="Бухгалтер.">Accountant</a>, <a class="el" href="class_editor.html" title="Редактор каталога.">Editor</a>) переопределяют виртуальный метод <a class="el" href="#aa82c9db656bbe43aa4831cb01b445e38" title="Выполняет обычную работу сотрудника.">work()</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_employee_8hpp_source.html">Employee.hpp</a> строка <a class="el" href="_employee_8hpp_source.html#l00013">13</a></p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a6146899a27321ab9b183ec44502cf2bc" name="a6146899a27321ab9b183ec44502cf2bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6146899a27321ab9b183ec44502cf2bc">&#9670;&#160;</a></span>Employee()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Employee::Employee </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>salary</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_role.html">Role</a></td>          <td class="paramname"><span class="paramname"><em>role</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создаёт сотрудника. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>ФИО. </td></tr>
+    <tr><td class="paramname">id</td><td>Табельный номер. </td></tr>
+    <tr><td class="paramname">salary</td><td>Зарплата, BYN. </td></tr>
+    <tr><td class="paramname">role</td><td>Роль. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="ad78934ca7e3f6c151e6a4f8209f19aaf" name="ad78934ca7e3f6c151e6a4f8209f19aaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad78934ca7e3f6c151e6a4f8209f19aaf">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Employee::getName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ФИО сотрудника. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Имя. </dd></dl>
+
+</div>
+</div>
+<a id="ac09c991d2a57bfc7ce996ba181d355b9" name="ac09c991d2a57bfc7ce996ba181d355b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac09c991d2a57bfc7ce996ba181d355b9">&#9670;&#160;</a></span>getRole()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_role.html">Role</a> Employee::getRole </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Роль сотрудника. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Роль. </dd></dl>
+
+</div>
+</div>
+<a id="a046fa9b5f8785c8c97dcb38ee7e801f9" name="a046fa9b5f8785c8c97dcb38ee7e801f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a046fa9b5f8785c8c97dcb38ee7e801f9">&#9670;&#160;</a></span>getSalary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Employee::getSalary </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зарплата. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Зарплата, BYN. </dd></dl>
+
+</div>
+</div>
+<a id="aa82c9db656bbe43aa4831cb01b445e38" name="aa82c9db656bbe43aa4831cb01b445e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa82c9db656bbe43aa4831cb01b445e38">&#9670;&#160;</a></span>work()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Employee::work </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выполняет обычную работу сотрудника. </p>
+<p>В базовом классе печатает «выполняет базовую работу»; наследники переопределяют (полиморфизм). </p>
+
+<p>Переопределяется в <a class="el" href="class_accountant.html#a8dd2f8fc4175e8e27d02c89e59a45cca">Accountant</a>, <a class="el" href="class_auditor.html#acd62b131052ddbc4d0bf7a682b46ac16">Auditor</a>, <a class="el" href="class_courier.html#a59f16e23a6ea24ec3eb97d32731d8f1b">Courier</a>, <a class="el" href="class_editor.html#ac61279f11cb3c9c966b87c9d80352bb8">Editor</a>, <a class="el" href="class_manager.html#ac494d65a3ecf08233f20a9bff9b4d070">Manager</a> и <a class="el" href="class_storekeeper.html#a8ea33b51ccdb9df9348a5527ac4fd86b">Storekeeper</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a83fa5faaa851e55183193f2a9e411513" name="a83fa5faaa851e55183193f2a9e411513"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83fa5faaa851e55183193f2a9e411513">&#9670;&#160;</a></span>id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Employee::id_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Табельный номер. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_employee_8hpp_source.html">Employee.hpp</a> строка <a class="el" href="_employee_8hpp_source.html#l00017">17</a></p>
+
+</div>
+</div>
+<a id="a61cad87d1bfb96467a355a278bbf5f24" name="a61cad87d1bfb96467a355a278bbf5f24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61cad87d1bfb96467a355a278bbf5f24">&#9670;&#160;</a></span>name_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Employee::name_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ФИО. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_employee_8hpp_source.html">Employee.hpp</a> строка <a class="el" href="_employee_8hpp_source.html#l00016">16</a></p>
+
+</div>
+</div>
+<a id="ad6a647bede5a0a28b561af1a5d80ac4b" name="ad6a647bede5a0a28b561af1a5d80ac4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6a647bede5a0a28b561af1a5d80ac4b">&#9670;&#160;</a></span>role_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_role.html">Role</a> Employee::role_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Роль (должность и уровень доступа). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_employee_8hpp_source.html">Employee.hpp</a> строка <a class="el" href="_employee_8hpp_source.html#l00019">19</a></p>
+
+</div>
+</div>
+<a id="a774298a56028e3958d64c97dea41111c" name="a774298a56028e3958d64c97dea41111c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a774298a56028e3958d64c97dea41111c">&#9670;&#160;</a></span>salary_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Employee::salary_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Зарплата, BYN. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_employee_8hpp_source.html">Employee.hpp</a> строка <a class="el" href="_employee_8hpp_source.html#l00018">18</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>include/lab2/people/<a class="el" href="_employee_8hpp_source.html">Employee.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_employee.html">Employee</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

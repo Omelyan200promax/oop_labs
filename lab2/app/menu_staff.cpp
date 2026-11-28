@@ -70,7 +70,7 @@ void Menu::runEmployeeMenu(Employee &emp)
     actions.push_back({"Журнал действий системы (нужен уровень 4+)", [&]
                        {
                            requireLevel(user, 4, "просмотр журнала");
-                           std::cout << "\n--- Журнал действий ---\n";
+                           std::cout << "\n- Журнал действий -\n";
                            auditLog_.printLog();
                        }});
 
@@ -179,7 +179,7 @@ void Menu::runEmployeeMenu(Employee &emp)
     int choice;
     do
     {
-        std::cout << "\n=== " << emp.getName() << " — " << emp.getRole().getTitle() << " (уровень " << level << ") ===\n";
+        std::cout << "\n= " << emp.getName() << " — " << emp.getRole().getTitle() << " (уровень " << level << ") =\n";
         for (size_t i = 0; i < actions.size(); ++i)
             std::cout << i + 1 << ". " << actions[i].title << "\n";
         std::cout << "0. Выйти\n\nВыбор: ";
@@ -220,7 +220,7 @@ void Menu::managerReport()
 
     Report report("Отчёт по продажам на " + today_.toString());
     report.setContent(os.str());
-    std::cout << "\n=== " << report.getTitle() << " ===\n" << report.getContent() << "\n";
+    std::cout << "\n= " << report.getTitle() << " =\n" << report.getContent() << "\n";
     logAction("Сформирован отчёт по продажам");
 }
 
@@ -243,14 +243,14 @@ void Menu::managerHandleReturns()
         std::cout << i + 1 << ". Заказ №" << rr.orderId << " (" << customers_[rec->customerIdx].getName()
                   << ", " << ui::money(rec->order.calculateTotal()) << " BYN). Причина: " << rr.reason << "\n";
     }
-    std::cout << "Выберите запрос (0 - назад): ";
+    std::cout << "\nВыберите запрос (0 - назад): ";
     int n = ui::readInt(0, static_cast<int>(pending.size()));
     if (n == 0)
         return;
 
     ReturnRecord &rr = returns_[pending[n - 1]];
     OrderRecord *rec = findOrder(rr.orderId);
-    std::cout << "1 - одобрить и вернуть деньги, 2 - отклонить, 0 - отмена: ";
+    std::cout << "\n1 - одобрить и вернуть деньги, 2 - отклонить, 0 - отмена: ";
     int decision = ui::readInt(0, 2);
     if (decision == 0)
         return;
@@ -286,7 +286,7 @@ void Menu::managerHandleReturns()
 bool Menu::managerDiscount()
 {
     auto map = showBooks(false);
-    std::cout << "Выберите книгу (0 - отмена): ";
+    std::cout << "\nВыберите книгу (0 - отмена): ";
     int n = ui::readInt(0, static_cast<int>(map.size()));
     if (n == 0)
         return false;
@@ -328,7 +328,7 @@ bool Menu::storekeeperReceiveSupply()
         throw SupplierNotFoundException("Нет действующего договора с поставщиком " + deal.supplierName);
 
     auto map = showBooks(false);
-    std::cout << "Какую книгу привезли (0 - отмена): ";
+    std::cout << "\nКакую книгу привезли (0 - отмена): ";
     int n = ui::readInt(0, static_cast<int>(map.size()));
     if (n == 0)
         return false;
@@ -363,7 +363,7 @@ void Menu::storekeeperShipOrder()
         OrderRecord *rec = findOrder(ids[i]);
         std::cout << i + 1 << ". Заказ №" << ids[i] << " (" << customers_[rec->customerIdx].getName() << "), книг: " << rec->order.getBookTitles().size() << "\n";
     }
-    std::cout << "Выберите заказ (0 - назад): ";
+    std::cout << "\nВыберите заказ (0 - назад): ";
     int n = ui::readInt(0, static_cast<int>(ids.size()));
     if (n == 0)
         return;
@@ -390,7 +390,7 @@ void Menu::storekeeperShipOrder()
 void Menu::storekeeperWriteOff()
 {
     auto map = showBooks(false);
-    std::cout << "Какая книга пропала с полки (0 - отмена): ";
+    std::cout << "\nКакая книга пропала с полки (0 - отмена): ";
     int n = ui::readInt(0, static_cast<int>(map.size()));
     if (n == 0)
         return;
@@ -420,7 +420,7 @@ void Menu::courierDeliver(Courier &courier)
         OrderRecord *rec = findOrder(ids[i]);
         std::cout << i + 1 << ". Заказ №" << ids[i] << " -> " << customers_[rec->customerIdx].getAddressStr() << "\n";
     }
-    std::cout << "Выберите заказ (0 - назад): ";
+    std::cout << "\nВыберите заказ (0 - назад): ";
     int n = ui::readInt(0, static_cast<int>(ids.size()));
     if (n == 0)
         return;
@@ -475,7 +475,7 @@ void Menu::accountantInvoice()
     std::cout << "\nЗаказы:\n";
     for (size_t i = 0; i < orders_.size(); ++i)
         std::cout << i + 1 << ". Заказ №" << orders_[i].order.getId() << " — " << ui::statusRu(orders_[i].order.getStatus()) << "\n";
-    std::cout << "Выберите заказ (0 - назад): ";
+    std::cout << "\nВыберите заказ (0 - назад): ";
     int n = ui::readInt(0, static_cast<int>(orders_.size()));
     if (n == 0)
         return;
@@ -490,7 +490,7 @@ void Menu::accountantPenalty()
 {
     for (size_t i = 0; i < staff_.size(); ++i)
         std::cout << i + 1 << ". " << staff_[i]->getName() << " (" << staff_[i]->getRole().getTitle() << ")\n";
-    std::cout << "Кого оштрафовать (0 - отмена): ";
+    std::cout << "\nКого оштрафовать (0 - отмена): ";
     int n = ui::readInt(0, static_cast<int>(staff_.size()));
     if (n == 0)
         return;
@@ -515,11 +515,12 @@ void Menu::editorAddBook()
     std::string last = ui::ask("Фамилия автора: ");
     std::cout << "Цена, BYN: ";
     double price = ui::readPositiveDouble();
-    std::string dimLine = ui::ask("Размеры в см (длина ширина высота), например 20 13 3: ");
-
-    double l = 0, w = 0, h = 0;
-    std::istringstream dims(ui::lowerUtf8(dimLine));
-    dims >> l >> w >> h; // при ошибке остаются нули -> InvalidDimensionsException
+    std::cout << "Длина, см: ";
+    double l = ui::readPositiveDouble();
+    std::cout << "Ширина, см: ";
+    double w = ui::readPositiveDouble();
+    std::cout << "Высота, см: ";
+    double h = ui::readPositiveDouble();
 
     for (const auto &b : books_)
         if (!isbn.empty() && b.getIsbn() == isbn)

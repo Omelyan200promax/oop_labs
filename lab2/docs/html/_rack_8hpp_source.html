@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab2 - Книжный склад: Исходный файл include/lab2/warehouse/Rack.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab2 - Книжный склад
+   </div>
+   <div id="projectbrief">Лабораторная работа №2: классы предметной области и консольное меню</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_rack_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Rack.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_rack_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_shelf_8hpp.html">lab2/warehouse/Shelf.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_rack.html">   13</a></span><span class="keyword">class </span><a class="code hl_function" href="class_rack.html#a00de18356ae8164c20519f88e8f446aa">Rack</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_rack.html#a7c3db457b7faf2b5ae7e941f367c0652">   16</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_rack.html#a7c3db457b7faf2b5ae7e941f367c0652">id_</a>; </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_rack.html#a1149a443095c3f790b9681bcd23fcbfe">   17</a></span>    std::vector&lt;Shelf&gt; <a class="code hl_variable" href="class_rack.html#a1149a443095c3f790b9681bcd23fcbfe">shelves_</a>; </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_rack.html#a00de18356ae8164c20519f88e8f446aa">   24</a></span>    <a class="code hl_function" href="class_rack.html#a00de18356ae8164c20519f88e8f446aa">Rack</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_rack.html#adbb9cb3c0f98e5af6de802324181b4e0">   29</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_rack.html#adbb9cb3c0f98e5af6de802324181b4e0">addShelf</a>(<a class="code hl_class" href="class_shelf.html">Shelf</a> shelf);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_rack.html#a8ed775f2cfe8733d3a7bc5c31f0b79a9">   34</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_rack.html#a8ed775f2cfe8733d3a7bc5c31f0b79a9">getShelfCount</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_rack.html#a7cede0d5b96050657cc3d8acabf0aa7b">   39</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_rack.html#a7cede0d5b96050657cc3d8acabf0aa7b">getId</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_rack.html#a7d1ebebb92b3af5d97eaf326d8a0c8e0">   44</a></span>    std::vector&lt;Shelf&gt; <a class="code hl_function" href="class_rack.html#a7d1ebebb92b3af5d97eaf326d8a0c8e0">getShelves</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_rack.html#a88c9139d8abe5558fc0f142fa9dd1db7">   53</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_rack.html#a88c9139d8abe5558fc0f142fa9dd1db7">storeBook</a>(<span class="keywordtype">double</span> weight, <span class="keyword">const</span> std::string &amp;title, <span class="keywordtype">int</span> &amp;nextBoxId);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_rack.html#a18062cf7d2a8f52329ee66339e3b47ef">   59</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_rack.html#a18062cf7d2a8f52329ee66339e3b47ef">removeBook</a>(<span class="keyword">const</span> std::string &amp;title);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_rack.html#a2916567052b6f32a768ffe4b426d8255">   65</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_rack.html#a2916567052b6f32a768ffe4b426d8255">countBook</a>(<span class="keyword">const</span> std::string &amp;title) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
+</div>
+<div class="ttc" id="a_shelf_8hpp_html"><div class="ttname"><a href="_shelf_8hpp.html">Shelf.hpp</a></div><div class="ttdoc">Класс Shelf — полка.</div></div>
+<div class="ttc" id="aclass_rack_html_a00de18356ae8164c20519f88e8f446aa"><div class="ttname"><a href="class_rack.html#a00de18356ae8164c20519f88e8f446aa">Rack::Rack</a></div><div class="ttdeci">Rack(int id)</div><div class="ttdoc">Создаёт пустой стеллаж.</div></div>
+<div class="ttc" id="aclass_rack_html_a1149a443095c3f790b9681bcd23fcbfe"><div class="ttname"><a href="class_rack.html#a1149a443095c3f790b9681bcd23fcbfe">Rack::shelves_</a></div><div class="ttdeci">std::vector&lt; Shelf &gt; shelves_</div><div class="ttdoc">Полки стеллажа.</div><div class="ttdef"><b>Определения</b> <a href="#l00017">Rack.hpp:17</a></div></div>
+<div class="ttc" id="aclass_rack_html_a18062cf7d2a8f52329ee66339e3b47ef"><div class="ttname"><a href="class_rack.html#a18062cf7d2a8f52329ee66339e3b47ef">Rack::removeBook</a></div><div class="ttdeci">bool removeBook(const std::string &amp;title)</div><div class="ttdoc">Снимает одну книгу с полок.</div></div>
+<div class="ttc" id="aclass_rack_html_a2916567052b6f32a768ffe4b426d8255"><div class="ttname"><a href="class_rack.html#a2916567052b6f32a768ffe4b426d8255">Rack::countBook</a></div><div class="ttdeci">int countBook(const std::string &amp;title) const</div><div class="ttdoc">Считает экземпляры книги на стеллаже.</div></div>
+<div class="ttc" id="aclass_rack_html_a7c3db457b7faf2b5ae7e941f367c0652"><div class="ttname"><a href="class_rack.html#a7c3db457b7faf2b5ae7e941f367c0652">Rack::id_</a></div><div class="ttdeci">int id_</div><div class="ttdoc">Номер стеллажа.</div><div class="ttdef"><b>Определения</b> <a href="#l00016">Rack.hpp:16</a></div></div>
+<div class="ttc" id="aclass_rack_html_a7cede0d5b96050657cc3d8acabf0aa7b"><div class="ttname"><a href="class_rack.html#a7cede0d5b96050657cc3d8acabf0aa7b">Rack::getId</a></div><div class="ttdeci">int getId() const</div><div class="ttdoc">Номер стеллажа.</div></div>
+<div class="ttc" id="aclass_rack_html_a7d1ebebb92b3af5d97eaf326d8a0c8e0"><div class="ttname"><a href="class_rack.html#a7d1ebebb92b3af5d97eaf326d8a0c8e0">Rack::getShelves</a></div><div class="ttdeci">std::vector&lt; Shelf &gt; getShelves() const</div><div class="ttdoc">Полки стеллажа.</div></div>
+<div class="ttc" id="aclass_rack_html_a88c9139d8abe5558fc0f142fa9dd1db7"><div class="ttname"><a href="class_rack.html#a88c9139d8abe5558fc0f142fa9dd1db7">Rack::storeBook</a></div><div class="ttdeci">bool storeBook(double weight, const std::string &amp;title, int &amp;nextBoxId)</div><div class="ttdoc">Размещает книгу на первой подходящей полке.</div></div>
+<div class="ttc" id="aclass_rack_html_a8ed775f2cfe8733d3a7bc5c31f0b79a9"><div class="ttname"><a href="class_rack.html#a8ed775f2cfe8733d3a7bc5c31f0b79a9">Rack::getShelfCount</a></div><div class="ttdeci">int getShelfCount() const</div><div class="ttdoc">Количество полок.</div></div>
+<div class="ttc" id="aclass_rack_html_adbb9cb3c0f98e5af6de802324181b4e0"><div class="ttname"><a href="class_rack.html#adbb9cb3c0f98e5af6de802324181b4e0">Rack::addShelf</a></div><div class="ttdeci">void addShelf(Shelf shelf)</div><div class="ttdoc">Добавляет полку.</div></div>
+<div class="ttc" id="aclass_shelf_html"><div class="ttname"><a href="class_shelf.html">Shelf</a></div><div class="ttdoc">Полка, на которой стоит ограниченное число коробок.</div><div class="ttdef"><b>Определения</b> <a href="_shelf_8hpp_source.html#l00013">Shelf.hpp:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_891b15cd915228d690ff1b982c095043.html">lab2</a></li><li class="navelem"><a href="dir_b4387ab3d5d0c364f2341a108c6d0dc1.html">warehouse</a></li><li class="navelem"><a href="_rack_8hpp.html">Rack.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+# Doxyfile для lab2 (минимальный набор настроек; всё остальное — значения по умолчанию)
+PROJECT_NAME           = "lab2 - Книжный склад"
+PROJECT_BRIEF          = "Лабораторная работа №2: классы предметной области и консольное меню"
+OUTPUT_DIRECTORY       = docs
+OUTPUT_LANGUAGE        = Russian
+DOXYFILE_ENCODING      = UTF-8
+INPUT                  = include README.md
+INPUT_ENCODING         = UTF-8
+FILE_PATTERNS          = *.hpp *.md
+RECURSIVE              = YES
+USE_MDFILE_AS_MAINPAGE = README.md
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+JAVADOC_AUTOBRIEF      = YES
+SOURCE_BROWSER         = YES
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+HAVE_DOT               = NO

@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab2 - Книжный склад: Класс Warehouse</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab2 - Книжный склад
+   </div>
+   <div id="projectbrief">Лабораторная работа №2: классы предметной области и консольное меню</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_warehouse.html','','class_warehouse-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс Warehouse</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Склад книг: адрес, контакты и секции.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_warehouse_8hpp_source.html">Warehouse.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a48ade7e386c6ec880d8f8392adc2254d" id="r_a48ade7e386c6ec880d8f8392adc2254d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48ade7e386c6ec880d8f8392adc2254d">Warehouse</a> (std::string name, <a class="el" href="class_address.html">Address</a> address, <a class="el" href="class_contact_info.html">ContactInfo</a> contact)</td></tr>
+<tr class="memdesc:a48ade7e386c6ec880d8f8392adc2254d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт склад без секций.  <br /></td></tr>
+<tr class="memitem:afde8c3890f615c45ef4c4d2260a0680b" id="r_afde8c3890f615c45ef4c4d2260a0680b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afde8c3890f615c45ef4c4d2260a0680b">addSection</a> (<a class="el" href="class_section.html">Section</a> section)</td></tr>
+<tr class="memdesc:afde8c3890f615c45ef4c4d2260a0680b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет секцию.  <br /></td></tr>
+<tr class="memitem:a76a8707f79fd872f0ae9f9a4ef049f75" id="r_a76a8707f79fd872f0ae9f9a4ef049f75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76a8707f79fd872f0ae9f9a4ef049f75">printFullStructure</a> () const</td></tr>
+<tr class="memdesc:a76a8707f79fd872f0ae9f9a4ef049f75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Печатает полную структуру склада.  <br /></td></tr>
+<tr class="memitem:ab6607d9780011e4372907a15c5aa100e" id="r_ab6607d9780011e4372907a15c5aa100e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6607d9780011e4372907a15c5aa100e">storeBook</a> (double weight, const std::string &amp;title)</td></tr>
+<tr class="memdesc:ab6607d9780011e4372907a15c5aa100e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размещает книгу в первой секции, где есть место.  <br /></td></tr>
+<tr class="memitem:ab359b53b1a345df2faf88638f7df6be7" id="r_ab359b53b1a345df2faf88638f7df6be7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab359b53b1a345df2faf88638f7df6be7">removeBook</a> (const std::string &amp;title)</td></tr>
+<tr class="memdesc:ab359b53b1a345df2faf88638f7df6be7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Снимает одну книгу со склада.  <br /></td></tr>
+<tr class="memitem:af17ab02cea307c465b266b00d48d5dd1" id="r_af17ab02cea307c465b266b00d48d5dd1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af17ab02cea307c465b266b00d48d5dd1">countBook</a> (const std::string &amp;title) const</td></tr>
+<tr class="memdesc:af17ab02cea307c465b266b00d48d5dd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Считает экземпляры книги на складе.  <br /></td></tr>
+<tr class="memitem:a43273eed37407b4345ac828f1484546c" id="r_a43273eed37407b4345ac828f1484546c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43273eed37407b4345ac828f1484546c">getTotalStored</a> () const</td></tr>
+<tr class="memdesc:a43273eed37407b4345ac828f1484546c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Общее число хранимых книг.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a8d5ab1dbec1690366feb675e807bf5d2" id="r_a8d5ab1dbec1690366feb675e807bf5d2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d5ab1dbec1690366feb675e807bf5d2">name_</a></td></tr>
+<tr class="memdesc:a8d5ab1dbec1690366feb675e807bf5d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Название склада.  <br /></td></tr>
+<tr class="memitem:a0c4d2975fd8689642ee7fb20c60152c1" id="r_a0c4d2975fd8689642ee7fb20c60152c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_address.html">Address</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c4d2975fd8689642ee7fb20c60152c1">address_</a></td></tr>
+<tr class="memdesc:a0c4d2975fd8689642ee7fb20c60152c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Адрес.  <br /></td></tr>
+<tr class="memitem:a81054a1510cfde6dd2654dca66848b9a" id="r_a81054a1510cfde6dd2654dca66848b9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_contact_info.html">ContactInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81054a1510cfde6dd2654dca66848b9a">contact_</a></td></tr>
+<tr class="memdesc:a81054a1510cfde6dd2654dca66848b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Контакты.  <br /></td></tr>
+<tr class="memitem:ab7d2d6356441b5e27f774520a7acb06e" id="r_ab7d2d6356441b5e27f774520a7acb06e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_section.html">Section</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7d2d6356441b5e27f774520a7acb06e">sections_</a></td></tr>
+<tr class="memdesc:ab7d2d6356441b5e27f774520a7acb06e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Секции склада.  <br /></td></tr>
+<tr class="memitem:af59b1a46704656a50cd080437d989a95" id="r_af59b1a46704656a50cd080437d989a95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af59b1a46704656a50cd080437d989a95">nextBoxId_</a> = 1</td></tr>
+<tr class="memdesc:af59b1a46704656a50cd080437d989a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Следующий свободный номер коробки.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Склад книг: адрес, контакты и секции. </p>
+<p>Через него выполняется физическое размещение, снятие и подсчёт книг. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_warehouse_8hpp_source.html">Warehouse.hpp</a> строка <a class="el" href="_warehouse_8hpp_source.html#l00016">16</a></p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Конструктор(ы)</h2>
+<a id="a48ade7e386c6ec880d8f8392adc2254d" name="a48ade7e386c6ec880d8f8392adc2254d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48ade7e386c6ec880d8f8392adc2254d">&#9670;&#160;</a></span>Warehouse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Warehouse::Warehouse </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_address.html">Address</a></td>          <td class="paramname"><span class="paramname"><em>address</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_contact_info.html">ContactInfo</a></td>          <td class="paramname"><span class="paramname"><em>contact</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создаёт склад без секций. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Название. </td></tr>
+    <tr><td class="paramname">address</td><td>Адрес. </td></tr>
+    <tr><td class="paramname">contact</td><td>Контакты. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="afde8c3890f615c45ef4c4d2260a0680b" name="afde8c3890f615c45ef4c4d2260a0680b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afde8c3890f615c45ef4c4d2260a0680b">&#9670;&#160;</a></span>addSection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Warehouse::addSection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_section.html">Section</a></td>          <td class="paramname"><span class="paramname"><em>section</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет секцию. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">section</td><td>Секция. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af17ab02cea307c465b266b00d48d5dd1" name="af17ab02cea307c465b266b00d48d5dd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af17ab02cea307c465b266b00d48d5dd1">&#9670;&#160;</a></span>countBook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Warehouse::countBook </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Считает экземпляры книги на складе. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>Название. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Количество на полках. </dd></dl>
+
+</div>
+</div>
+<a id="a43273eed37407b4345ac828f1484546c" name="a43273eed37407b4345ac828f1484546c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43273eed37407b4345ac828f1484546c">&#9670;&#160;</a></span>getTotalStored()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Warehouse::getTotalStored </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Общее число хранимых книг. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Сумма по всем секциям. </dd></dl>
+
+</div>
+</div>
+<a id="a76a8707f79fd872f0ae9f9a4ef049f75" name="a76a8707f79fd872f0ae9f9a4ef049f75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76a8707f79fd872f0ae9f9a4ef049f75">&#9670;&#160;</a></span>printFullStructure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Warehouse::printFullStructure </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Печатает полную структуру склада. </p>
+<p>Секции, стеллажи, полки и коробки с содержимым — в стандартный вывод. </p>
+
+</div>
+</div>
+<a id="ab359b53b1a345df2faf88638f7df6be7" name="ab359b53b1a345df2faf88638f7df6be7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab359b53b1a345df2faf88638f7df6be7">&#9670;&#160;</a></span>removeBook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Warehouse::removeBook </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Снимает одну книгу со склада. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">title</td><td>Название. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если книга найдена и снята. </dd></dl>
+
+</div>
+</div>
+<a id="ab6607d9780011e4372907a15c5aa100e" name="ab6607d9780011e4372907a15c5aa100e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6607d9780011e4372907a15c5aa100e">&#9670;&#160;</a></span>storeBook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Warehouse::storeBook </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>weight</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>title</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Размещает книгу в первой секции, где есть место. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">weight</td><td>Вес книги, кг. </td></tr>
+    <tr><td class="paramname">title</td><td>Название. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если книга размещена; false, если места нет нигде. </dd></dl>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Данные класса</h2>
+<a id="a0c4d2975fd8689642ee7fb20c60152c1" name="a0c4d2975fd8689642ee7fb20c60152c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c4d2975fd8689642ee7fb20c60152c1">&#9670;&#160;</a></span>address_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_address.html">Address</a> Warehouse::address_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Адрес. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_warehouse_8hpp_source.html">Warehouse.hpp</a> строка <a class="el" href="_warehouse_8hpp_source.html#l00020">20</a></p>
+
+</div>
+</div>
+<a id="a81054a1510cfde6dd2654dca66848b9a" name="a81054a1510cfde6dd2654dca66848b9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81054a1510cfde6dd2654dca66848b9a">&#9670;&#160;</a></span>contact_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_contact_info.html">ContactInfo</a> Warehouse::contact_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Контакты. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_warehouse_8hpp_source.html">Warehouse.hpp</a> строка <a class="el" href="_warehouse_8hpp_source.html#l00021">21</a></p>
+
+</div>
+</div>
+<a id="a8d5ab1dbec1690366feb675e807bf5d2" name="a8d5ab1dbec1690366feb675e807bf5d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d5ab1dbec1690366feb675e807bf5d2">&#9670;&#160;</a></span>name_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Warehouse::name_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Название склада. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_warehouse_8hpp_source.html">Warehouse.hpp</a> строка <a class="el" href="_warehouse_8hpp_source.html#l00019">19</a></p>
+
+</div>
+</div>
+<a id="af59b1a46704656a50cd080437d989a95" name="af59b1a46704656a50cd080437d989a95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af59b1a46704656a50cd080437d989a95">&#9670;&#160;</a></span>nextBoxId_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Warehouse::nextBoxId_ = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Следующий свободный номер коробки. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_warehouse_8hpp_source.html">Warehouse.hpp</a> строка <a class="el" href="_warehouse_8hpp_source.html#l00023">23</a></p>
+
+</div>
+</div>
+<a id="ab7d2d6356441b5e27f774520a7acb06e" name="ab7d2d6356441b5e27f774520a7acb06e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7d2d6356441b5e27f774520a7acb06e">&#9670;&#160;</a></span>sections_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_section.html">Section</a>&gt; Warehouse::sections_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Секции склада. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_warehouse_8hpp_source.html">Warehouse.hpp</a> строка <a class="el" href="_warehouse_8hpp_source.html#l00022">22</a></p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>include/lab2/warehouse/<a class="el" href="_warehouse_8hpp_source.html">Warehouse.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_warehouse.html">Warehouse</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

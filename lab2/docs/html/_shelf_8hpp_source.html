@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>lab2 - Книжный склад: Исходный файл include/lab2/warehouse/Shelf.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">lab2 - Книжный склад
+   </div>
+   <div id="projectbrief">Лабораторная работа №2: классы предметной области и консольное меню</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_shelf_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Shelf.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_shelf_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_box_8hpp.html">lab2/warehouse/Box.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_shelf.html">   13</a></span><span class="keyword">class </span><a class="code hl_function" href="class_shelf.html#a3077cfd3d98050c3861cc75024717b90">Shelf</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_shelf.html#a97a85e0eccf44a88d1c142951349f1e0">   16</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_shelf.html#a97a85e0eccf44a88d1c142951349f1e0">id_</a>; </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_shelf.html#aa2b3e3747bcd6163d4a050ebb4c9b026">   17</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_shelf.html#aa2b3e3747bcd6163d4a050ebb4c9b026">maxBoxes_</a>; </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_shelf.html#ad138afd65c0091fb665c23929ca79fd3">   18</a></span>    std::vector&lt;Box&gt; <a class="code hl_variable" href="class_shelf.html#ad138afd65c0091fb665c23929ca79fd3">boxes_</a>; </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// Максимальный вес новой коробки, создаваемой при раскладке книг</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_shelf.html#a072a7f0d88f94a84237465e67fb7ad9f">   25</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="class_shelf.html#a072a7f0d88f94a84237465e67fb7ad9f">DEFAULT_BOX_WEIGHT</a> = 20.0;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_shelf.html#a3077cfd3d98050c3861cc75024717b90">   32</a></span>    <a class="code hl_function" href="class_shelf.html#a3077cfd3d98050c3861cc75024717b90">Shelf</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> maxBoxes);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_shelf.html#ac0e2fcb3cea032205887daeb493aebd9">   38</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_shelf.html#ac0e2fcb3cea032205887daeb493aebd9">addBox</a>(<a class="code hl_class" href="class_box.html">Box</a> box);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_shelf.html#ab68ccb3ee4adee5c9e9bd4fb6dc6a024">   43</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_shelf.html#ab68ccb3ee4adee5c9e9bd4fb6dc6a024">getBoxCount</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_shelf.html#a8d4e28df45c3aaaa81d89b1a2a89b07c">   48</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_shelf.html#a8d4e28df45c3aaaa81d89b1a2a89b07c">getId</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_shelf.html#ae4d390eeadebb6deefe403cbd1a3f145">   53</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_shelf.html#ae4d390eeadebb6deefe403cbd1a3f145">getMaxBoxes</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_shelf.html#adc16a326f9fd09218bff85cb942dc555">   58</a></span>    std::vector&lt;Box&gt; <a class="code hl_function" href="class_shelf.html#adc16a326f9fd09218bff85cb942dc555">getBoxes</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// Кладёт книгу в подходящую коробку (или заводит новую, если есть место на полке).</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// nextBoxId увеличивается только при создании новой коробки.</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_shelf.html#a78adc6a33f8ca03560ebf12e14df0d1f">   70</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shelf.html#a78adc6a33f8ca03560ebf12e14df0d1f">storeBook</a>(<span class="keywordtype">double</span> weight, <span class="keyword">const</span> std::string &amp;title, <span class="keywordtype">int</span> &amp;nextBoxId);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_shelf.html#a438302f65e5ce9fb6d7ed1fd9a28a6f3">   76</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_shelf.html#a438302f65e5ce9fb6d7ed1fd9a28a6f3">removeBook</a>(<span class="keyword">const</span> std::string &amp;title);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_shelf.html#ad8ff51b073f23c03e90cf46d6a019855">   82</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_shelf.html#ad8ff51b073f23c03e90cf46d6a019855">countBook</a>(<span class="keyword">const</span> std::string &amp;title) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>};</div>
+</div>
+<div class="ttc" id="a_box_8hpp_html"><div class="ttname"><a href="_box_8hpp.html">Box.hpp</a></div><div class="ttdoc">Класс Box — коробка с книгами.</div></div>
+<div class="ttc" id="aclass_box_html"><div class="ttname"><a href="class_box.html">Box</a></div><div class="ttdoc">Коробка с книгами, ограниченная по суммарному весу.</div><div class="ttdef"><b>Определения</b> <a href="_box_8hpp_source.html#l00013">Box.hpp:14</a></div></div>
+<div class="ttc" id="aclass_shelf_html_a072a7f0d88f94a84237465e67fb7ad9f"><div class="ttname"><a href="class_shelf.html#a072a7f0d88f94a84237465e67fb7ad9f">Shelf::DEFAULT_BOX_WEIGHT</a></div><div class="ttdeci">static constexpr double DEFAULT_BOX_WEIGHT</div><div class="ttdoc">Максимальный вес новой коробки, создаваемой при раскладке книг (кг).</div><div class="ttdef"><b>Определения</b> <a href="#l00025">Shelf.hpp:25</a></div></div>
+<div class="ttc" id="aclass_shelf_html_a3077cfd3d98050c3861cc75024717b90"><div class="ttname"><a href="class_shelf.html#a3077cfd3d98050c3861cc75024717b90">Shelf::Shelf</a></div><div class="ttdeci">Shelf(int id, int maxBoxes)</div><div class="ttdoc">Создаёт пустую полку.</div></div>
+<div class="ttc" id="aclass_shelf_html_a438302f65e5ce9fb6d7ed1fd9a28a6f3"><div class="ttname"><a href="class_shelf.html#a438302f65e5ce9fb6d7ed1fd9a28a6f3">Shelf::removeBook</a></div><div class="ttdeci">bool removeBook(const std::string &amp;title)</div><div class="ttdoc">Снимает одну книгу с полки.</div></div>
+<div class="ttc" id="aclass_shelf_html_a78adc6a33f8ca03560ebf12e14df0d1f"><div class="ttname"><a href="class_shelf.html#a78adc6a33f8ca03560ebf12e14df0d1f">Shelf::storeBook</a></div><div class="ttdeci">bool storeBook(double weight, const std::string &amp;title, int &amp;nextBoxId)</div><div class="ttdoc">Кладёт книгу в подходящую коробку или заводит новую.</div></div>
+<div class="ttc" id="aclass_shelf_html_a8d4e28df45c3aaaa81d89b1a2a89b07c"><div class="ttname"><a href="class_shelf.html#a8d4e28df45c3aaaa81d89b1a2a89b07c">Shelf::getId</a></div><div class="ttdeci">int getId() const</div><div class="ttdoc">Номер полки.</div></div>
+<div class="ttc" id="aclass_shelf_html_a97a85e0eccf44a88d1c142951349f1e0"><div class="ttname"><a href="class_shelf.html#a97a85e0eccf44a88d1c142951349f1e0">Shelf::id_</a></div><div class="ttdeci">int id_</div><div class="ttdoc">Номер полки.</div><div class="ttdef"><b>Определения</b> <a href="#l00016">Shelf.hpp:16</a></div></div>
+<div class="ttc" id="aclass_shelf_html_aa2b3e3747bcd6163d4a050ebb4c9b026"><div class="ttname"><a href="class_shelf.html#aa2b3e3747bcd6163d4a050ebb4c9b026">Shelf::maxBoxes_</a></div><div class="ttdeci">int maxBoxes_</div><div class="ttdoc">Максимум коробок.</div><div class="ttdef"><b>Определения</b> <a href="#l00017">Shelf.hpp:17</a></div></div>
+<div class="ttc" id="aclass_shelf_html_ab68ccb3ee4adee5c9e9bd4fb6dc6a024"><div class="ttname"><a href="class_shelf.html#ab68ccb3ee4adee5c9e9bd4fb6dc6a024">Shelf::getBoxCount</a></div><div class="ttdeci">int getBoxCount() const</div><div class="ttdoc">Количество коробок.</div></div>
+<div class="ttc" id="aclass_shelf_html_ac0e2fcb3cea032205887daeb493aebd9"><div class="ttname"><a href="class_shelf.html#ac0e2fcb3cea032205887daeb493aebd9">Shelf::addBox</a></div><div class="ttdeci">void addBox(Box box)</div><div class="ttdoc">Ставит готовую коробку на полку.</div></div>
+<div class="ttc" id="aclass_shelf_html_ad138afd65c0091fb665c23929ca79fd3"><div class="ttname"><a href="class_shelf.html#ad138afd65c0091fb665c23929ca79fd3">Shelf::boxes_</a></div><div class="ttdeci">std::vector&lt; Box &gt; boxes_</div><div class="ttdoc">Коробки на полке.</div><div class="ttdef"><b>Определения</b> <a href="#l00018">Shelf.hpp:18</a></div></div>
+<div class="ttc" id="aclass_shelf_html_ad8ff51b073f23c03e90cf46d6a019855"><div class="ttname"><a href="class_shelf.html#ad8ff51b073f23c03e90cf46d6a019855">Shelf::countBook</a></div><div class="ttdeci">int countBook(const std::string &amp;title) const</div><div class="ttdoc">Считает экземпляры книги на полке.</div></div>
+<div class="ttc" id="aclass_shelf_html_adc16a326f9fd09218bff85cb942dc555"><div class="ttname"><a href="class_shelf.html#adc16a326f9fd09218bff85cb942dc555">Shelf::getBoxes</a></div><div class="ttdeci">std::vector&lt; Box &gt; getBoxes() const</div><div class="ttdoc">Коробки полки.</div></div>
+<div class="ttc" id="aclass_shelf_html_ae4d390eeadebb6deefe403cbd1a3f145"><div class="ttname"><a href="class_shelf.html#ae4d390eeadebb6deefe403cbd1a3f145">Shelf::getMaxBoxes</a></div><div class="ttdeci">int getMaxBoxes() const</div><div class="ttdoc">Вместимость полки.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a href="dir_891b15cd915228d690ff1b982c095043.html">lab2</a></li><li class="navelem"><a href="dir_b4387ab3d5d0c364f2341a108c6d0dc1.html">warehouse</a></li><li class="navelem"><a href="_shelf_8hpp.html">Shelf.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>
